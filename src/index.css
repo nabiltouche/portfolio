@@ -1,5 +1,21 @@
 @import 'tailwindcss';
 
+:root {
+  --bg: 0 0% 100%;
+  --text: 222 47% 11%;
+  --primary: 158 72% 42%;
+  --secondary: 210 20% 66%;
+}
+
+.dark {
+  --bg: 222 47% 17%;
+  --text: 210 20% 98%;
+  --primary: 158 72% 42%;
+  --secondary: 210 20% 53%;
+}
+
+
+
 * {
-    font-family: "Manrope", sans-serif;
+  font-family: "Manrope", sans-serif;
 }

@@ -1,10 +1,13 @@
 import Hero from "./components/Hero"
- 
+import { ThemeProvider } from "./context/ThemeProvider"
+
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
-      <Hero /> 
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-blue dark:bg-gray-900">
+        <Hero />
+      </div>
+    </ThemeProvider>
   )
 }
 
