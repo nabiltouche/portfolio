@@ -11,12 +11,12 @@ const Navbar = () => {
                 </a>
                 {darkMode ? (
                     <Sun
-                        className="md:text-3xl sm:text-2xl text-xl text-emerald-500 hover:cursor-pointer"
+                        className="md:text-3xl sm:text-2xl text-xl text-primary hover:cursor-pointer"
                         onClick={toggleDarkMode}
                     />
                 ) : (
                     <Moon
-                        className="md:text-3xl sm:text-2xl text-xl text-emerald-500 hover:cursor-pointer"
+                        className="md:text-3xl sm:text-2xl text-xl text-primary hover:cursor-pointer"
                         onClick={toggleDarkMode}
                     />
                 )}
@@ -25,10 +25,10 @@ const Navbar = () => {
             <div>
                 <a
                     href="#"
-                    className="group lg:text-lg md:text-base text-sm font-light text-emerald-500 lg:mr-12 mr-8 tracking-wide relative"
+                    className="group lg:text-lg md:text-base text-sm font-light text-primary lg:mr-12 mr-8 tracking-wide relative"
                 >
                     Home
-                    <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-emerald-500 transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-primary transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300"></span>
                 </a>
                 <a
                     href="#"
