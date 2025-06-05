@@ -1,17 +1,10 @@
 @import 'tailwindcss';
 
-:root {
-  --bg: 0 0% 100%;
-  --text: 222 47% 11%;
-  --primary: 158 72% 42%;
-  --secondary: 210 20% 66%;
-}
-
-.dark {
-  --bg: 222 47% 17%;
-  --text: 210 20% 98%;
-  --primary: 158 72% 42%;
-  --secondary: 210 20% 53%;
+@theme {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --primary: #10b981; 
+  --secondary: #94a3b8;
 }
 
 
