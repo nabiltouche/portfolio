@@ -4,7 +4,7 @@ import { ThemeProvider } from "./context/ThemeProvider"
 const App = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-blue dark:bg-gray-900">
+      <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
         <Hero />
       </div>
     </ThemeProvider>

@@ -12,12 +12,18 @@ const Navbar = () => {
                 {darkMode ? (
                     <Sun
                         className="md:text-3xl sm:text-2xl text-xl text-primary hover:cursor-pointer"
-                        onClick={toggleDarkMode}
+                        onClick={() => {
+                            toggleDarkMode()
+                            console.log("Light mode toggled")
+                        }}
                     />
                 ) : (
                     <Moon
                         className="md:text-3xl sm:text-2xl text-xl text-primary hover:cursor-pointer"
-                        onClick={toggleDarkMode}
+                        onClick={() => {
+                            toggleDarkMode()
+                            console.log("Dark mode toggled")
+                        }}
                     />
                 )}
 

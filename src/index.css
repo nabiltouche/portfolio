@@ -7,6 +7,12 @@
   --color-secondary: #94a3b8;
 }
 
+.dark {
+  --color-bg: #0f172a; /* Dark background */
+  --color-text: #ffffff; /* Light text */
+  --color-primary: #34d399; /* Slightly adjusted primary for dark mode, or keep same */
+  --color-secondary: #64748b; /* Adjusted secondary */
+}
 
 
 * {
