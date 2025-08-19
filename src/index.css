@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -5,15 +6,21 @@
   --color-text: #0f172a;
   --color-primary: #10b981; 
   --color-secondary: #94a3b8;
+  /* font-display: "Ubranist, sans-serif */
 }
 
-.dark {
-  --color-bg: #0f172a; /* Dark background */
-  --color-text: #ffffff; /* Light text */
-  --color-primary: #34d399; /* Slightly adjusted primary for dark mode, or keep same */
-  --color-secondary: #64748b; /* Adjusted secondary */
-}
+/* @layer base {
+  html {
+    font-family: var(--font-display);
+  }
 
+  body {
+    background-color: #000000;
+    overflow-x: hidden;
+  }
+} */
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 * {
   font-family: "Manrope", sans-serif;

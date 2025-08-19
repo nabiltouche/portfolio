@@ -15,4 +15,14 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+
+  <script>
+    (() => {
+      const saved = localStorage.getItem("darkMode");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (saved === "true" || (saved === null && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
 </html>
