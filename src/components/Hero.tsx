@@ -219,7 +219,7 @@ const Hero = () => {
                 >
                   Get in Touch
                 </motion.button>
-                
+
               </motion.div>
 
               {/* Social Links - Mobile */}
@@ -246,10 +246,62 @@ const Hero = () => {
                 ))}
               </motion.div>
 
+              {/* Tech Stack - Mobile */}
+              <motion.div
+                variants={itemVariants}
+                className=""
+              >
+                <span
+                  className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+                >
+                  React
+                </span>
+                <span
+                  className={isDarkMode ? "text-gray-700" : "text-gray-400"}
+                >
+                  ⸱
+                </span>
+                <span
+                  className={isDarkMode ? "text-gray-800" : "text-gray-500"}
+                >
+                  Node.js
+                </span>
+                <span
+                  className={isDarkMode ? "text-gray-700" : "text-gray-400"}
+                >
+                  ⸱
+                </span>
+                <span
+                  className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+                >
+                  TypeScript
+                </span>
+                <span
+                  className={isDarkMode ? "text-gray-700" : "text-gray-400"}
+                >
+                  ⸱
+                </span>
+                <span
+                  className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+                >
+                  MongoDB
+                </span>
+              </motion.div>
             </motion.div>    
           </div>
-
         </div>
+        {/* Scroll Down Indicator */}
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className=""
+        >
+          <ArrowDown
+            size={24}
+            className={isDarkMode ? "text-gray-600" : "text-gray-400"}
+          />
+        </motion.div>
+        
       </motion.section>
     </div>
   )
