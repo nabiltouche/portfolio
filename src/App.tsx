@@ -1,3 +1,4 @@
+import AboutSection from "./components/AboutSection"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import ProjectsSection from "./components/ProjectsSection"
@@ -12,6 +13,7 @@ const App = () => {
         <Hero />
         <SkillsSection />
         <ProjectsSection />
+        <AboutSection />
       </div>
     </ThemeProvider>
   )
