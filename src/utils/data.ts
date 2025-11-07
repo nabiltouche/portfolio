@@ -1,4 +1,5 @@
 import { FaCode, FaServer, FaTools } from "react-icons/fa"
+import { Code, Heart, Globe } from "lucide-react"
 import PROJECT_IMG_1 from "../assets/images/nab.jpg"
 import PROJECT_IMG_2 from "../assets/images/nab.jpg"
 import PROJECT_IMG_3 from "../assets/images/nab.jpg"
@@ -183,17 +184,17 @@ export const SOCIAL_LINKS = [
 
 export const PASSIONS = [
   {
-    icon: "",
+    icon: Code,
     title: "DÉVELOPPEMENT WEB",
     description: "Créer des sites modernes et dynamiques avec React et Next.js.",
   },
   {
-    icon: "",
+    icon: Heart,
     title: "ANIMATION JEUNESSE",
     description: "Transmettre, jouer et créer des activités uniques pour les jeunes.",
   },
   {
-    icon: "",
+    icon: Globe,
     title: "VOYAGE & CULTURE",
     description: "Découvrir le monde et s’inspirer de chaque lieu et rencontre.",
   },
