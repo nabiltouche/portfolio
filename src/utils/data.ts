@@ -206,7 +206,7 @@ export const JOURNEY_STEPS = [
     title: "ALTERNANCE DÉVELOPPEUR WEB",
     company: "Zapata Digital Europe",
     description: "Création de sites web vitrines et gestion des réseaux sociaux.",
-    icon: "",
+    icon: Code,
     color: "#0A66C2",
   },
   {
@@ -214,7 +214,7 @@ export const JOURNEY_STEPS = [
     title: "SCRUM MASTER - PROJET ÉTUDIANT",
     company: "Université",
     description: "Encadrement d’une équipe de 13 personnes sur un projet agile.",
-    icon: "",
+    icon: Code,
     color: "#F59E0B",
   },
   {
@@ -222,7 +222,7 @@ export const JOURNEY_STEPS = [
     title: "ANIMATEUR JEUNESSE",
     company: "Unité Marseillaise",
     description: "Organisation de séjours, veillées et grands jeux pour les jeunes.",
-    icon: "",
+    icon: Code,
     color: "#10B981",
   },
 ]
