@@ -5,7 +5,6 @@ import { useTheme } from "../context/useTheme"
 import { containerVariants, itemVariants } from "../utils/helper"
 import { JOURNEY_STEPS, PASSIONS } from "../utils/data"
 
-
 const AboutSection = () => {
     const { isDarkMode } = useTheme()
     const sectionRef = useRef(null)
@@ -43,7 +42,6 @@ const AboutSection = () => {
         },
     };
 
-
     return (
         <section
             id="about"
@@ -52,7 +50,6 @@ const AboutSection = () => {
                 isDarkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-900"
             } relative overflow-hidden`}
         >
-            {/* Background Elements */}
             <motion.div style={{ y }} className="absolute inset-0 overflow-hidden">
                 <div
                     className={`absolute top-40 right-1/3 w-80 h-80 rounded-full blur-3xl opacity-5${
@@ -64,13 +61,9 @@ const AboutSection = () => {
                         isDarkMode ? " bg-blue-700" : " bg-blue-300"
                     }`}
                 />
-
-
             </motion.div>
 
             <div className="max-w-6xl mx-auto relative z-10">
-            
-                {/* Section Header */}
                 <motion.div
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
@@ -95,7 +88,6 @@ const AboutSection = () => {
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
-                    {/* Personal Story */}
                     <motion.div
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
@@ -133,7 +125,6 @@ const AboutSection = () => {
                             </p>
                         </motion.div>
 
-                        {/* What I Love Building */}
                         <motion.div
                             variants={itemVariants}
                             className="space-y-4"
@@ -157,7 +148,6 @@ const AboutSection = () => {
                                             }`}
                                         >
                                             <passion.icon size={24} className="text-blue-500" />
-
                                         </div>
                                         <div>
                                             <h4 className="font-medium mb-1">{passion.title}</h4>
@@ -169,31 +159,12 @@ const AboutSection = () => {
                                                 {passion.description}
                                             </p>
                                         </div>
-                                        
-
                                     </motion.div>
                                 ))}
                             </div>
                         </motion.div>
-
-
-                        {/* Digital Signature */}
-                        <motion.div variants={itemVariants} className="text-center py-8">
-                            <div
-                                className={`text-sm ${
-                                    isDarkMode ? "text-gray-400" : "text-gray-600"
-                                } mb-4`}
-                            >
-                                <em>Crafted with passion by</em>
-                            </div>
-                            <div className="text-lg font-medium text-primary mt-2">
-                                Nabil Touche
-                            </div>
-                        </motion.div>
-
                     </motion.div>
 
-                    {/* Developer Journey Timeline */}
                     <motion.div
                         ref={timelineRef}
                         initial="hidden"
@@ -205,7 +176,6 @@ const AboutSection = () => {
                             My Developer Journey
                         </h3>
 
-                        {/* Timeline Line */}
                         <div
                             className={`absolute left-8 top-16 bottom-0 w-px ${
                                 isDarkMode ? "bg-gray-600" : "bg-gray-300"
@@ -219,19 +189,16 @@ const AboutSection = () => {
                                     whileHover={{ x:4 }}
                                     className="relative flex items-start space-x-6 group"
                                 >
-                                    {/* Timeline Dot */}
                                     <div
                                         className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-full ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
                                     >
                                         <step.icon size={24} className="text-white" />
                                     </div>
-
-                                    {/* Timeline Content */}
                                     <div
                                         className={`flex-grow p-6 rounded-xl border transition-all duration-300 ${
                                             isDarkMode
                                                 ? "border-gray-700 bg-gray-900 group-hover:border-gray-500 hover:bg-gray-800/50"
-                                                  : "border-gray-300 bg-white group-hover:border-gray-500 hover:bg-gray-100/50"
+                                                : "border-gray-300 bg-white group-hover:border-gray-500 hover:bg-gray-100/50"
                                         } backdrop-blur-sm`}
                                     >
                                         <div className="flex items-center justify-between mb-2">
@@ -245,58 +212,70 @@ const AboutSection = () => {
                                             >
                                                 {step.year}
                                             </span>
-                                            <div
-                                                className={`text-sm font-medium ${
-                                                    isDarkMode ? "text-gray-300" : "text-gray-700"
-                                                } mb-3`}
-                                            >
-                                                {step.company}
-                                            </div>
-                                            <p
-                                                className={`text-sm leading-relaxed ${
-                                                    isDarkMode ? "text-gray-400" : "text-gray-600"
-                                                }`}
-                                            >
-                                                {step.description}
-                                            </p>
                                         </div>
+                                        <div
+                                            className={`text-sm font-medium ${
+                                                isDarkMode ? "text-gray-300" : "text-gray-700"
+                                            } mb-3`}
+                                        >
+                                            {step.company}
+                                        </div>
+                                        <p
+                                            className={`text-sm leading-relaxed ${
+                                                isDarkMode ? "text-gray-400" : "text-gray-600"
+                                            }`}
+                                        >
+                                            {step.description}
+                                        </p>
                                     </div>
                                 </motion.div>
                             ))}                        
                         </div>
                     </motion.div>
+                </div> 
 
-                    {/* Call to Action */}
-                    <motion.div
-                        initial="hidden"
-                        animate={isInView ? "visible" : "hidden"}
-                        variants={containerVariants}
-                        className="text-center mt-20"
-                        >
-                        <motion.div variants={itemVariants} className="flex flex-col items-center space-y-6">
-                            <p
+                <motion.div variants={itemVariants} className="text-center py-8">
+                    <div
+                        className={`text-sm ${
+                            isDarkMode ? "text-gray-400" : "text-gray-600"
+                        } mb-4`}
+                    >
+                        <em>Crafted with passion by</em>
+                    </div>
+                    <div className="text-lg font-medium text-primary mt-2">
+                        Nabil Touche
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    className="text-center mt-20"
+                >
+                    <motion.div variants={itemVariants} className="flex flex-col items-center space-y-6">
+                        <p
                             className={`text-lg ${
                                 isDarkMode ? "text-gray-400" : "text-gray-600"
                             }`}
-                            >
+                        >
                             Ready to bring your ideas to life?
-                            </p>
+                        </p>
 
-                            <motion.button
-                                whileHover={{ y: -2, scale: 1.05 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
-                            >
+                        <motion.button
+                            whileHover={{ y: -2, scale: 1.05 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
+                        >
                             Let’s Work Together
-                            </motion.button>
-                        </motion.div>
-
+                        </motion.button>
                     </motion.div>
-                </div> 
+                </motion.div>
             </div>
-            
+
+            <SuccesModel
         </section>
-  )
+    )
 }
 
 export default AboutSection

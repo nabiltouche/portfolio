@@ -3,6 +3,7 @@ import { Code, Heart, Globe } from "lucide-react"
 import PROJECT_IMG_1 from "../assets/images/nab.jpg"
 import PROJECT_IMG_2 from "../assets/images/nab.jpg"
 import PROJECT_IMG_3 from "../assets/images/nab.jpg"
+import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi"
 
 
 
@@ -142,17 +143,17 @@ export const PROJECTS = [
 
 export const CONTACT_INFO = [
   {
-    icon: "",
+    icon: Code,
     label: "EMAIL",
     value: "exemple@email.com",
   },
   {
-    icon: "",
+    icon: Code,
     label: "TÉLÉPHONE",
     value: "+33 6 12 34 56 78",
   },
   {
-    icon: "",
+    icon: Code,
     label: "LOCALISATION",
     value: "Marseille, France",
   },
@@ -161,21 +162,21 @@ export const CONTACT_INFO = [
 export const SOCIAL_LINKS = [
   {
     name: "GITHUB",
-    icon: "",
+    icon: FiGithub,
     url: "https://github.com/",
     color: "#fff",
     bgColor: "#000",
   },
   {
     name: "LINKEDIN",
-    icon: "",
+    icon: FiLinkedin,
     url: "https://linkedin.com/",
     color: "#fff",
     bgColor: "#0A66C2",
   },
   {
     name: "INSTAGRAM",
-    icon: "",
+    icon: FiInstagram,
     url: "https://instagram.com/",
     color: "#fff",
     bgColor: "#E4405F",
