@@ -5,6 +5,7 @@ import { useTheme } from "../context/useTheme"
 import { containerVariants, itemVariants } from "../utils/helper"
 import { JOURNEY_STEPS, PASSIONS } from "../utils/data"
 
+
 const AboutSection = () => {
     const { isDarkMode } = useTheme()
     const sectionRef = useRef(null)
@@ -273,7 +274,7 @@ const AboutSection = () => {
                 </motion.div>
             </div>
 
-            <SuccesModel
+            
         </section>
     )
 }
