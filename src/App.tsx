@@ -5,17 +5,19 @@ import Navbar from "./components/Navbar"
 import ProjectsSection from "./components/ProjectsSection"
 import SkillsSection from "./components/SkillsSection"
 import { ThemeProvider } from "./context/ThemeProvider"
+import Footer from "./components/Footer"
 
 const App = () => {
   return (
     <ThemeProvider>
-      <div className="pb-[100vh] bg-gray-400">
+      <div className="">
         <Navbar />
         <Hero />
         <SkillsSection />
         <ProjectsSection />
         <AboutSection />
         <ContactSection />
+        <Footer />
       </div>
     </ThemeProvider>
   )

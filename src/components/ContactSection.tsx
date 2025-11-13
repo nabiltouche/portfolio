@@ -111,7 +111,7 @@ const ContactSection = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-16 items-start mb-5">
             {/* Contact Form */}
             <motion.div
               initial="hidden"
@@ -284,7 +284,7 @@ const ContactSection = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="text-center mt-20"
+            className="text-center mt-20 mb-5"
           >
             <motion.div
               variants={itemVariants}
