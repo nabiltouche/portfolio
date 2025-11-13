@@ -3,6 +3,9 @@ import { useTheme } from "../context/useTheme"
 import { motion, AnimatePresence } from "framer-motion"
 import { Sun, Moon, Menu, X } from "lucide-react"
 import logo from "../assets/images/logoNabik.png"
+import frFlag from "../assets/flags/fr.png"
+import enFlag from "../assets/flags/gb.png"
+import { useTranslation } from "react-i18next"
 
 interface NavButtonProps {
   label: string
@@ -23,7 +26,15 @@ const NavButton = ({ label, onClick }: NavButtonProps) => (
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const links = ["Home", "Projects", "About", "Contact"]
+  const { t, i18n } = useTranslation()
+
+const links = [
+  { key: "home", label: t("navbar.home") },
+  { key: "projects", label: t("navbar.projects") },
+  { key: "about", label: t("navbar.about") },
+  { key: "contact", label: t("navbar.contact") },
+]
+
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -31,6 +42,10 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" })
       setIsMenuOpen(false)
     }
+  }
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")
   }
 
   useEffect(() => {
@@ -57,15 +72,35 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center space-x-8">
-          {links.map((item) => (
-            <NavButton key={item} label={item} onClick={() => scrollToSection(item.toLowerCase())} />
+          {links.map((link) => (
+            <NavButton key={link.key} label={link.label} onClick={() => scrollToSection(link.key.toLowerCase())} />
           ))}
+
+          {/* Bouton langue */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={toggleLanguage}
+            className={`flex items-center justify-center w-9 h-9 rounded-full border transition-colors ${
+              isDarkMode
+                ? "border-gray-700 hover:bg-gray-800"
+                : "border-gray-300 hover:bg-gray-100"
+            }`}
+          >
+            <img
+              src={i18n.language === "fr" ? frFlag : enFlag}
+              alt={i18n.language === "fr" ? "Français" : "English"}
+              className="w-10 h-8 rounded-full object-cover"
+            />
+          </motion.button>
+
+          {/* Bouton mode clair/sombre */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={toggleDarkMode}
             className={`p-2 rounded-full transition-colors ${
-              isDarkMode ? "bg-gray-900 text-white hover:bg-gray-800" : "bg-white-500 text-gray-900 hover:bg-gray-200"
+              isDarkMode ? "bg-gray-900 text-white hover:bg-gray-800" : "bg-white text-gray-900 hover:bg-gray-200"
             }`}
           >
             {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
@@ -74,6 +109,21 @@ const Navbar = () => {
 
         {/* Mobile */}
         <div className="md:hidden flex items-center space-x-4">
+          {/* Langue mobile */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={toggleLanguage}
+            className="w-8 h-8"
+          >
+            <img
+              src={i18n.language === "fr" ? frFlag : enFlag}
+              alt={i18n.language === "fr" ? "Français" : "English"}
+              className="w-7 h-7 rounded-full object-cover"
+            />
+          </motion.button>
+
+          {/* Dark mode */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -86,6 +136,7 @@ const Navbar = () => {
             {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
           </motion.button>
 
+          {/* Menu mobile */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -112,8 +163,8 @@ const Navbar = () => {
               isDarkMode ? "border-gray-800" : "border-gray-200"
             }`}
           >
-            {links.map((item) => (
-              <NavButton key={item} label={item} onClick={() => scrollToSection(item.toLowerCase())} />
+            {links.map((link) => (
+              <NavButton key={link.key} label={link.label} onClick={() => scrollToSection(link.key.toLowerCase())} />
             ))}
           </motion.div>
         )}

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   motion,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -18,6 +20,7 @@ import { containerVariants, itemVariants } from '../utils/helper';
 
 
 const Hero = () => {
+  const { t } = useTranslation();
   const { isDarkMode } = useTheme();
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 500], [0, -100]);
@@ -143,7 +146,7 @@ const Hero = () => {
                   isDarkMode ? "text-primary" : "text-text"
                 } mb-4`}
               >
-                Full Stack Developer
+                {t("hero.work")}
               </motion.div>
 
               <motion.h1
@@ -153,14 +156,14 @@ const Hero = () => {
                 <span
                   className={`${isDarkMode ? "text-white" : "text-gray-900"}`}
                 >
-                  Le Boss Du game
+                  {t("hero.title1")}
                 </span>
                 <span className="text-blue-500 font-medium ml-2">
-                  experiences
+                  {t("hero.title2")}
                 </span>
                 <br />
                 <span className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  that matter
+                  {t("hero.title3")}
                 </span>
               </motion.h1>
               
@@ -170,7 +173,7 @@ const Hero = () => {
                   isDarkMode ? "text-gray-300" : "text-gray-700"
                 } mb-8 max-w-xl mx-auto font-light leading-relaxed`}
               >
-                Actuellement sans emplois je vais abandonner et m'inscrire sur Onlyfans 
+                {t("hero.subtitle")}
               </motion.p>
 
               {/* CTA Buttons - Mobile */}
@@ -185,7 +188,7 @@ const Hero = () => {
                   onClick={() => scrollToSection('work')}
                   className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 "
                 >
-                  View Work
+                  {t("hero.viewWork")}
                 </motion.button>
 
                 <motion.button
@@ -198,7 +201,7 @@ const Hero = () => {
                       : "border-gray-300 hover:border-gray-400 text-gray-700"
                   } px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 `}
                 >
-                  Get in Touch
+                  {t("hero.getInTouch")}
                 </motion.button>
 
               </motion.div>
@@ -286,7 +289,7 @@ const Hero = () => {
                   isDarkMode ? "text-primary" : "text-text"
                 } mb-6`}
               >
-                Full Stack Developer
+                {t("hero.work")}
               </motion.div>
 
               <motion.h1
@@ -296,13 +299,12 @@ const Hero = () => {
                 <span
                   className={`${isDarkMode ? "text-white" : "text-gray-900"}`}
                 >
-                  Building digital
+                  {t("hero.title1")}
                 </span>
-                <br />
-                <span className="text-primary font-medium">experiences</span>
+                <span className="text-primary font-medium">{t("hero.title2")}</span>
                 <br />
                 <span className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  that matter
+                  {t("hero.title3")}
                 </span>
 
               </motion.h1>
@@ -313,7 +315,7 @@ const Hero = () => {
                   isDarkMode ? "text-gray-300" : "text-gray-700"
                 } mb-12 font-light leading-relaxed max-w-lg`}
               >
-                Actuellement sans emplois je vais abandonner et m'inscrire sur Onlyfans 
+                {t("hero.subtitle")}
               </motion.p>
               {/* CTA Buttons - Desktop */}
               <motion.div variants={itemVariants} className="flex gap-6 mb-8">
@@ -323,7 +325,7 @@ const Hero = () => {
                   onClick={() => scrollToSection('work')}
                   className="bg-primary hover:bg-primary text-text px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
                 >
-                  View Work
+                  {t("hero.viewWork")}
                 </motion.button>
                 <motion.button
                   whileHover={{ y: -2 }}
@@ -335,7 +337,7 @@ const Hero = () => {
                     : "border-gray-300 hover:border-gray-400 text-gray-700"
                 } px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300`}
                 >
-                  Get in Touch
+                  {t("hero.getInTouch")}
                 </motion.button>
               </motion.div>
 
