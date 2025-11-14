@@ -14,6 +14,9 @@
     "viewWork": "Voir mes projets",
     "getInTouch": "Me contacter"
   },
+  "skills": {
+    "technicalExpertise": "Compétences techniques"
+  },
   "footer": {
     "rights": "Tous droits réservés."
   }

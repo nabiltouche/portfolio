@@ -5,6 +5,7 @@ import { delay, motion, useInView, useScroll, useTransform, type Easing, type Va
 import { useTheme } from "../context/useTheme"
 import { SKILLS_CATEGORY, STATS, TECH_STACK } from "../utils/data";
 import { containerVariants, itemVariants } from "../utils/helper";
+import { useTranslation } from "react-i18next";
 
 const SkillsSection = () => {
     const { isDarkMode } = useTheme();
@@ -17,21 +18,22 @@ const SkillsSection = () => {
     });
 
     const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
+    const { t } = useTranslation();
 
 
 
-const skillBarVariants: Variants = {
-  hidden: { width: 0, opacity: 0 },
-  visible: (level: number) => ({
-    width: `${level}%`,
-    opacity: 1,
-    transition: {
-      duration: 1.2,
-      ease: [0.42, 0, 0.58, 1] as Easing, // remplace "easeInOut" par sa version array
-      delay: 0.3,
-    },
-  }),
-}
+    const skillBarVariants: Variants = {
+    hidden: { width: 0, opacity: 0 },
+    visible: (level: number) => ({
+        width: `${level}%`,
+        opacity: 1,
+        transition: {
+        duration: 1.2,
+        ease: [0.42, 0, 0.58, 1] as Easing, // remplace "easeInOut" par sa version array
+        delay: 0.3,
+        },
+    }),
+    }
 
 
 
@@ -70,7 +72,7 @@ const skillBarVariants: Variants = {
                         isDarkMode ? "text-primary" : "text-text"
                     } mb-4`}
                 >
-                    Technical Expertise
+                    {t("skills.technicalExpertise")}
                 </motion.div>
 
                 <motion.h2

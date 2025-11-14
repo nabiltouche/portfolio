@@ -14,6 +14,9 @@
     "viewWork": "View Work",
     "getInTouch": "Get In Touch"
   },
+  "skills": {
+    "technicalExpertise": "Technical Expertise"
+  },
   "footer": {
     "rights": "All rights reserved."
   }
