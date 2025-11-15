@@ -5,12 +5,14 @@ import { useTheme } from "../context/useTheme"
 import { PROJECTS } from "../utils/data"
 import { containerVariants, itemVariants } from "../utils/helper"
 import ProjectCard from "./ProjectCard"
+import { useTranslation } from "react-i18next"
 
 
 const ProjectsSection = () => {
     const { isDarkMode } = useTheme();
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true});
+    const { t } = useTranslation();
 
   return (
     <section
@@ -40,15 +42,15 @@ const ProjectsSection = () => {
               isDarkMode ? "text-primary" : "text-text"
             } mb-4`}
           >
-            Featured Work
+            {t("project.preTitle")}
           </motion.div>
 
           <motion.h2
             variants={itemVariants}
             className="text-3xl md:text-5xl font-light mb-6"
           >
-            Recent
-            <span className="text-primary font-medium"> Projects</span>
+            {t("project.title1")}
+            <span className="text-primary font-medium">{t("project.title2")}</span>
           </motion.h2>
 
           <motion.p
@@ -57,7 +59,7 @@ const ProjectsSection = () => {
               isDarkMode ? "text-primary" : "text-text"
             } max-w-2xl mx-auto font-light`}
           >
-            A selection of projects showcasing my skills in web development, from frontend interfaces to full-stack applications.
+            {t("project.description")}
           </motion.p>
         </motion.div>
 

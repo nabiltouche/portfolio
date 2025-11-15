@@ -31,6 +31,46 @@
     "yearsOfExperience": "Années d’expérience",
     "clientSatisfaction": "Satisfaction client"
   },
+  "project": {
+    "preTitle": "Mes réalisations",
+    "title1": "Mes",
+    "title2": "projets",
+    "description": "Voici quelques projets que j’ai construits en tant que développeur web."
+  },
+  "projectItems": {
+    "portfolio": {
+      "title": "Site Portfolio",
+      "description": "Un portfolio moderne et responsive construit avec React et Tailwind CSS."
+    },
+    "taskManager": {
+      "title": "Application de gestion de tâches",
+      "description": "Une application full-stack avec authentification et gestion des tâches."
+    },
+    "dashboard": {
+      "title": "Tableau de bord E-commerce",
+      "description": "Un tableau de bord admin pour gérer produits, commandes et statistiques."
+    },
+    "blog": {
+      "title": "Plateforme de blog",
+      "description": "Une plateforme de blog complète avec commentaires et système de likes."
+    },
+    "weather": {
+      "title": "Application météo",
+      "description": "Affiche la météo actuelle et les prévisions pour n’importe quelle ville."
+    },
+    "chat": {
+      "title": "Application de chat",
+      "description": "Une application de chat en temps réel avec salons et emojis."
+    },
+    "elearning": {
+      "title": "Plateforme E-learning",
+      "description": "Plateforme pour créer et suivre des cours en ligne avec quiz."
+    }
+  },
+  "projectCard": {
+    "liveDemo": "Démo en ligne",
+    "github": "Github"
+  },
   "footer": {
     "rights": "Tous droits réservés."
   }

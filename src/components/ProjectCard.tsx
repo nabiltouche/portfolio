@@ -2,6 +2,7 @@ import { easeOut, motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 import { FiGithub } from "react-icons/fi"
 import { PROJECTS } from "../utils/data"
+import { useTranslation } from "react-i18next"
 
 
 type Project = typeof PROJECTS[number]
@@ -15,6 +16,7 @@ interface ProjectCardProps {
 
 
 const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
+    const { t } = useTranslation();
     const cardVariants = {
         hidden: { y: 20, opacity: 0  },
         visible: {
@@ -87,7 +89,7 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
                         className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium transition-colors "
                     >
                         <ExternalLink size={20} className="" />
-                        <span>Live Demo</span>
+                        <span>{t("projectCard.liveDemo")}</span>
                     </motion.a>
 
                     <motion.a 
@@ -98,7 +100,7 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
                         className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium transition-all"
                     >
                         <FiGithub size={20} className="" /> 
-                        <span>Github</span>
+                        <span>{t("projectCard.github")}</span>
                     </motion.a>
                 </motion.div>
             </div>
@@ -106,14 +108,14 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
             {/* Project Content */}
             <div className="p-6">
                 <h3 className="text-xl font-medium mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
+                    {t(project.title)}
                 </h3>
                 <p
                     className={`text-sm leading-relaxed mb-4 ${
                         isDarkMode ? "text-gray-400" : "text-gray-600"
                     }`}
                 >
-                    {project.description}
+                    {t(project.description)}
                 </p>
 
                 {/* Tags */}
