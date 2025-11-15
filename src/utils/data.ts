@@ -9,8 +9,8 @@ import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi"
 
 export const SKILLS_CATEGORY = [
   {
-    title: "Frontend Development",
-    description: "Building responsive and dynamic user interfaces.",
+    title: "skills.frontendTitle",
+    description: "skills.frontendSubtitle",
     icon: FaCode,
     skills: [
       { name: "JavaScript", level: 90, color: "bg-yellow-400" },
@@ -21,8 +21,8 @@ export const SKILLS_CATEGORY = [
     ],
   },
   {
-    title: "Backend Development",
-    description: "APIs, databases, and server-side logic.",
+    title: "skills.backendTitle",
+    description: "skills.backendSubtitle",
     icon: FaServer,
     skills: [
       { name: "Node.js", level: 85, color: "bg-green-500" },
@@ -32,8 +32,8 @@ export const SKILLS_CATEGORY = [
     ],
   },
   {
-    title: "Tools & Others",
-    description: "Development tools and version control.",
+    title: "skills.toolsTitle",
+    description: "skills.toolsSubtitle",
     icon: FaTools,
     skills: [
       { name: "Git / GitHub", level: 85, color: "bg-orange-500" },
@@ -55,10 +55,10 @@ export const TECH_STACK = [
 ]
 
 export const STATS = [
-  { label: "Projects Completed", number: "2+" },
-  { label: "Technologies", number: "8+" },
-  { label: "Years of Experience", number: "3+" },
-  { label: "Client Satisfaction", number: "100%" },
+  { label: "skills.projectsCompleted", number: "2+" },
+  { label: "skills.technologies", number: "8+" },
+  { label: "skills.yearsOfExperience", number: "3+" },
+  { label: "skills.clientSatisfaction", number: "100%" },
 ]
 
 export const PROJECTS = [

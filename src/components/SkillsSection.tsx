@@ -79,8 +79,8 @@ const SkillsSection = () => {
                     variants={itemVariants}
                     className="text-3xl md:text-5xl font-light mb-6"
                 >
-                    Skills &
-                    <span className="text-blue-500 font-medium"> Technologies</span>
+                    {t("skills.skillsTechnologies1")}
+                    <span className="text-blue-500 font-medium">{t("skills.skillsTechnologies2")}</span>
                 </motion.h2>
 
                 <motion.p
@@ -89,7 +89,7 @@ const SkillsSection = () => {
                         isDarkMode ? "text-primary" : "text-text"
                     } max-w-2xl mx-auto font-light`}
                 >
-                    A comprehensive toolkit for building modern, scalable web applications from concept to deployment.
+                    {t("skills.presentationSkills")}
                 </motion.p>
 
             </motion.div>
@@ -121,13 +121,13 @@ const SkillsSection = () => {
                             <category.icon size={24} className="text-blue-500" />
                         </div>
                         <div>
-                            <h3 className="">{category.title}</h3>
+                            <h3 className="">{t(category.title)}</h3>
                             <p
                                 className={`text-sm ${
                                     isDarkMode ? "text-primary" : "text-text"
                                 }`}
                             >
-                                {category.description}
+                                {t(category.description)}
                             </p>
                         </div>
                     </div>
@@ -176,7 +176,7 @@ const SkillsSection = () => {
             className="mt-16"
         >
             <motion.div variants={itemVariants} className="text-center mb-8">
-                <h3 className="text-xl font-medium mb-4">Also Working With</h3>
+                <h3 className="text-xl font-medium mb-4">{t("skills.alsoWorkingWith")}</h3>
             </motion.div>
 
             <motion.div
@@ -220,7 +220,7 @@ const SkillsSection = () => {
                             isDarkMode ? "text-gray-400" : "text-gray-600"
                         }`}
                     >
-                        {stat.label}
+                        {t(stat.label)}
                     </div>
                 </motion.div>
             ))}

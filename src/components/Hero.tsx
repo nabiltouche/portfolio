@@ -158,6 +158,7 @@ const Hero = () => {
                 >
                   {t("hero.title1")}
                 </span>
+                <br />
                 <span className="text-blue-500 font-medium ml-2">
                   {t("hero.title2")}
                 </span>
@@ -301,6 +302,7 @@ const Hero = () => {
                 >
                   {t("hero.title1")}
                 </span>
+                <br />
                 <span className="text-primary font-medium">{t("hero.title2")}</span>
                 <br />
                 <span className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>

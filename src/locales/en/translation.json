@@ -8,14 +8,28 @@
   "hero": {
     "work": "Full Stack Web Developer",
     "title1": "I build what you",
-    "title2": " imagine.",
+    "title2": "imagine.",
     "title3": "and make it unforgettable.",
     "subtitle": "Passionate web developer, looking for new challenges.",
     "viewWork": "View Work",
     "getInTouch": "Get In Touch"
   },
   "skills": {
-    "technicalExpertise": "Technical Expertise"
+    "technicalExpertise": "Technical Expertise",
+    "skillsTechnologies1": "Skills &",
+    "skillsTechnologies2": " Technologies",
+    "presentationSkills": "The tools that bring your ideas to life.",
+    "frontendTitle": "Frontend Development",
+    "frontendSubtitle": "Building responsive and dynamic user interfaces.",
+    "backendTitle": "Backend Development",
+    "backendSubtitle": "APIs, databases, and server-side logic.",
+    "toolsTitle": "Tools & Others",
+    "toolsSubtitle": "Development tools and version control.",
+    "alsoWorkingWith": "Also Working With",
+    "projectsCompleted": "Projects Completed",
+    "technologies": "Technologies",
+    "yearsOfExperience": "Years of Experience",
+    "clientSatisfaction": "Client Satisfaction"
   },
   "footer": {
     "rights": "All rights reserved."

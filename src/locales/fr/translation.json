@@ -15,7 +15,21 @@
     "getInTouch": "Me contacter"
   },
   "skills": {
-    "technicalExpertise": "Compétences techniques"
+    "technicalExpertise": "Compétences techniques",
+    "skillsTechnologies1": "Compétences &",
+    "skillsTechnologies2": " Technologies",
+    "presentationSkills": "Les outils qui donnent vie à tes idées.",
+    "frontendTitle": "Développement Front-End",
+    "frontendSubtitle": "Créer des interfaces réactives, modernes et fluides.",
+    "backendTitle": "Développement Back-End",
+    "backendSubtitle": "APIs, bases de données et logique serveur.",
+    "toolsTitle": "Outils & Autres",
+    "toolsSubtitle": "Outils de développement et gestion de version.",
+    "alsoWorkingWith": "Je travaille aussi avec",
+    "projectsCompleted": "Projets réalisés",
+    "technologies": "Technologies",
+    "yearsOfExperience": "Années d’expérience",
+    "clientSatisfaction": "Satisfaction client"
   },
   "footer": {
     "rights": "Tous droits réservés."
