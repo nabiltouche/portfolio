@@ -12,9 +12,11 @@ import {
 import { useTheme } from '../context/useTheme'
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 import { containerVariants, itemVariants } from "../utils/helper";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
     const { isDarkMode } = useTheme();
+    const { t } = useTranslation();
     const footerRef = useRef(null);
     const isInView = useInView(footerRef, {once: true, margin: "-50px" });
 
@@ -55,7 +57,7 @@ const Footer = () => {
     // Animated Gradient Line Component
 
     const AnimatedGradientLine = () => {
-  return (
+    return (
     <div className="absolute top-0 left-0 w-full h-px overflow-hidden">
       <motion.div 
         className={`h-px bg-gradient-to-r ${
@@ -137,7 +139,7 @@ const Footer = () => {
                             variants={itemVariants}
                             className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} max-w-md mx-auto`}
                         >
-                            Crafting digital experience with passion.
+                            {t("footer.crafting")}
                         </motion.p>
 
                     </motion.div>
@@ -193,10 +195,10 @@ const Footer = () => {
                     {/* Copyright */}
                     <motion.div variants={itemVariants} className="space-y-2">
                         <p className={`text-sm ${isDarkMode ? 'text-gray-500' : 'text-gray-600'}`}>
-                            © {new Date().getFullYear()} Time to Program. All rights reserved.
+                            © {new Date().getFullYear()} {t("footer.allRight")}.
                         </p>
                         <p className={`text-sm ${isDarkMode ? 'text-gray-500' : 'text-gray-600'}`}>
-                            Build with React & Framer Motion · TDesigned with care
+                            {t("footer.text")}
                         </p>
                     </motion.div>
 
@@ -212,7 +214,7 @@ const Footer = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <ArrowUp size={16} />
-                            <span>Back to top</span>
+                            <span>{t("footer.backToTop")}</span>
                         </motion.button>
                     </motion.div>
                 </motion.div>

@@ -34,7 +34,7 @@
   "project": {
     "preTitle": "My Work",
     "title1": "My",
-    "title2": "Projects",
+    "title2": " Projects",
     "description": "Here are some projects I’ve built as a web developer."
   },
     "projectItems": {
@@ -81,38 +81,67 @@
     "myPassions": "My Passions",
     "manga": {
       "title": "Les mangas",
-      "description": "hihihi."
+      "description": "hi."
     },
     "animation": {
       "title": "l'animation",
-      "description": "tout ça jeux et tt"
+      "description": "LOL"
     },
     "voyage": {
-      "title": "les voyages",
-      "description": "partir et tt"
+      "title": "VOYAGE",
+      "description": "GO AWAY"
     },
     "education": "Education & Certifications",
     "licence": {
       "title": "Licence Info",
       "company": "AMU",
-      "description": "c'etait dur"
+      "description": "SO HARD"
     },
     "bafa": {
       "title": "BAFA",
       "company": "IFAC",
-      "description": "enb leger"
+      "description": "GOOD JOB"
     },
     "bac": {
       "title": "Bac",
       "company": "st ex",
-      "description": "bac g on a dis"
+      "description": "BITCH"
     },
     "crafted": "Crafted with passion by",
     "ready": "Ready to bring your ideas to life?",
     "work": "Let’s Work Together"
   },
 
+  "contact": {
+    "letsConnect": "Let's Connect",
+    "getIn": "Get In",
+    "touch": " Touch",
+    "subtitle": "Ready to start your next project? Let's discuss how we can bring your ideas to life.",
+    "sendMeMessage": "Send me a message",
+    "yourName": "Your Name",
+    "emailAddress": "Email Address",
+    "yourMessage": "Your Message",
+    "sending": "Sending...",
+    "sendMessage": "Send Message",
+    "information": "Contact Information",
+    "email": "email",
+    "phone": "Phone",
+    "localisation": "localisation",
+    "follow": "Follow Me !",
+    "available": "Available for work",
+    "workText": "I'm currently available for freelance projects and full-time opportunities.",
+    "preferCall": "Prefer a quick call?",
+    "callText": "Sometimes a conversation is worth a thousand messages. Feel free to schedule a call to discuss your project.",
+    "scheduleCall": "Schedule a Call",
+    "messageSent": "Message Sent !",
+    "messageText": "Thank you for reaching out! I'll get back to you within 24 hours."
+  },
+
+
   "footer": {
-    "rights": "All rights reserved."
+    "crafting": "Crafting digital experience with passion.",
+    "text": "Build with React & Framer Motion · TDesigned with care",
+    "backToTop": "Back to top",
+    "allRight": "Time to Program. All rights reserved"
   }
 }

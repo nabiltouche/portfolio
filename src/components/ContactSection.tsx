@@ -12,11 +12,13 @@ import { CONTACT_INFO, SOCIAL_LINKS } from "../utils/data"
 import { containerVariants, itemVariants } from "../utils/helper"
 import TextInput from "../input/TextInput"
 import SuccessModel from "./SuccessModel"
+import { useTranslation } from "react-i18next"
 
 
 
 const ContactSection = () => {
     const { isDarkMode } = useTheme();
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -90,15 +92,15 @@ const ContactSection = () => {
                 isDarkMode ? "text-gray-500" : "text-gray-600"
               } mb-4`}
             >
-              Let's Connect
+              {t("contact.letsConnect")}
             </motion.div>
 
             <motion.h2
               variants={itemVariants}
               className="text-3xl md:text-5xl font-light mb-6"
             >
-              Get In
-              <span className="text-blue-500 font-medium"> Touch</span>
+              {t("contact.getIn")}
+              <span className="text-blue-500 font-medium">{t("contact.touch")}</span>
             </motion.h2>
 
             <motion.p
@@ -107,7 +109,7 @@ const ContactSection = () => {
                 isDarkMode ? "text-gray-400" : "text-gray-600"
               }`}
             >
-              Ready to start your next project? Let's discuss how we can bring your ideas to life.
+              {t("contact.subtitle")}
             </motion.p>
           </motion.div>
 
@@ -126,7 +128,7 @@ const ContactSection = () => {
                     : "bg-gray-50/80 border-gray-200 backdrop-blur-sm"
                 }`}
               >
-                <h3 className="text-2xl font-medium mb-8">Send me a message</h3>
+                <h3 className="text-2xl font-medium mb-8">{t("contact.sendMeMessage")}</h3>
 
                 {/*  FORMULAIRE */}
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -135,14 +137,14 @@ const ContactSection = () => {
                       isDarkMode={isDarkMode}
                       value={formData.name}
                       handleInputChange={(text) => handleInputChange("name", text)}
-                      label="Your Name"
+                      label={t("contact.yourName")}
                     />
 
                     <TextInput
                       isDarkMode={isDarkMode}
                       value={formData.email}
                       handleInputChange={(text) => handleInputChange("email", text)}
-                      label="Email Address"
+                      label={t("contact.emailAddress")}
                     />
                   </div>
 
@@ -150,7 +152,7 @@ const ContactSection = () => {
                     isDarkMode={isDarkMode}
                     value={formData.message}
                     handleInputChange={(text) => handleInputChange("message", text)}
-                    label="Your Message"
+                    label={t("contact.yourMessage")}
                     textarea
                   />
 
@@ -172,12 +174,12 @@ const ContactSection = () => {
                           }}
                           className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
                         />
-                        <span>Sending...</span>
+                        <span>{t("contact.sending")}</span>
                       </>
                     ) : (
                       <>
                         <Send size={18} />
-                        <span>Send Message</span>
+                        <span>{t("contact.sendMessage")}</span>
                       </>
                     )}
                   </motion.button>
@@ -195,7 +197,7 @@ const ContactSection = () => {
           >
             {/* Contact Information */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-medium mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-medium mb-6">{t("contact.information")}</h3>
               <div className="space-y-4">
                 {CONTACT_INFO.map((info, index) => (
                   <motion.div
@@ -221,7 +223,7 @@ const ContactSection = () => {
                           isDarkMode ? "text-gray-500" : "text-gray-600"
                         }`}
                       >
-                        {info.label}
+                        {t(info.label)}
                       </div>
                       <div className="font-medium">{info.value}</div>
                     </div>
@@ -231,7 +233,7 @@ const ContactSection = () => {
             </motion.div>
             {/* Social Links */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-xl font-medium mb-6">Follow Me !</h3>
+              <h3 className="text-xl font-medium mb-6">{t("contact.follow")}</h3>
               <div className="grid grid-cols-2 gap-4">
                 {SOCIAL_LINKS.map((social) => (
                   <motion.a
@@ -266,7 +268,7 @@ const ContactSection = () => {
               <div className="flex items-center space-x-3 mb-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-medium text-green-500">
-                  Available for work
+                  {t("contact.available")}
                 </span>
               </div>
               <p
@@ -274,7 +276,7 @@ const ContactSection = () => {
                   isDarkMode ? "text-gray-400" : "text-gray-600"
                 }`}
               >
-                I'm currently available for freelance projects and full-time opportunities.
+                {t("contact.workText")}
               </p>
             </motion.div>
           </motion.div>
@@ -294,13 +296,13 @@ const ContactSection = () => {
                   : "bg-gray-50/50 border-gray-200"
               }`}
             >
-              <h3 className="text-xl font-medium mb-4">Prefer a quick call?</h3>
+              <h3 className="text-xl font-medium mb-4">{t("contact.preferCall")}</h3>
               <p
                 className={`${
                   isDarkMode ? "text-gray-400" : "text-gray-600"
                 } mb-6`}
               >
-                Sometimes a conversation is worth a thousand messages. Feel free to schedule a call to discuss your project.
+                {t("contact.callText")}
               </p>
               <motion.button
                 whileHover={{ y: -2, scale: 1.05 }}
@@ -311,7 +313,7 @@ const ContactSection = () => {
                     : "border-gray-300 hover:border-blue-500 hover:text-blue-600"
                 }`}
               >
-                Schedule a Call
+                {t("contact.scheduleCall")}
               </motion.button>
             </motion.div>
           </motion.div>

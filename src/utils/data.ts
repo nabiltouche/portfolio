@@ -143,17 +143,17 @@ export const PROJECTS = [
 export const CONTACT_INFO = [
   {
     icon: Code,
-    label: "EMAIL",
+    label: "contact.email",
     value: "exemple@email.com",
   },
   {
     icon: Code,
-    label: "TÉLÉPHONE",
+    label: "contact.phone",
     value: "+33 6 12 34 56 78",
   },
   {
     icon: Code,
-    label: "LOCALISATION",
+    label: "contact.localisation",
     value: "Marseille, France",
   },
 ]
