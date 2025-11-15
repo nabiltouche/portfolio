@@ -184,44 +184,44 @@ export const SOCIAL_LINKS = [
 
 export const PASSIONS = [
   {
-    icon: Code,
-    title: "DÉVELOPPEMENT WEB",
-    description: "Créer des sites modernes et dynamiques avec React et Next.js.",
-  },
-  {
     icon: Heart,
-    title: "ANIMATION JEUNESSE",
-    description: "Transmettre, jouer et créer des activités uniques pour les jeunes.",
+    title: "about.manga.title",
+    description: "about.manga.description",
   },
   {
     icon: Globe,
-    title: "VOYAGE & CULTURE",
-    description: "Découvrir le monde et s’inspirer de chaque lieu et rencontre.",
+    title: "about.animation.title",
+    description: "about.animation.description",
+  },
+  {
+    icon: Globe,
+    title: "about.voyage.title",
+    description: "about.voyage.description",
   },
 ]
 
-export const JOURNEY_STEPS = [
+export const EDUCATION_JOURNEY_STEPS = [
   {
     year: "2025",
-    title: "ALTERNANCE DÉVELOPPEUR WEB",
-    company: "Zapata Digital Europe",
-    description: "Création de sites web vitrines et gestion des réseaux sociaux.",
+    title: "about.licence.title",
+    company: "about.licence.company",
+    description: "about.licence.description",
     icon: Code,
     color: "#0A66C2",
   },
   {
     year: "2024",
-    title: "SCRUM MASTER - PROJET ÉTUDIANT",
-    company: "Université",
-    description: "Encadrement d’une équipe de 13 personnes sur un projet agile.",
+    title: "about.bafa.title",
+    company: "about.bafa.company",
+    description: "about.bafa.description",
     icon: Code,
     color: "#F59E0B",
   },
   {
     year: "2023",
-    title: "ANIMATEUR JEUNESSE",
-    company: "Unité Marseillaise",
-    description: "Organisation de séjours, veillées et grands jeux pour les jeunes.",
+    title: "about.bac.title",
+    company: "about.bac.company",
+    description: "about.bac.description",
     icon: Code,
     color: "#10B981",
   },

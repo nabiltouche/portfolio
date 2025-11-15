@@ -3,11 +3,13 @@ import { motion, easeOut, useInView, useScroll, useTransform } from "framer-moti
 import { useRef } from "react"
 import { useTheme } from "../context/useTheme"
 import { containerVariants, itemVariants } from "../utils/helper"
-import { JOURNEY_STEPS, PASSIONS } from "../utils/data"
+import { EDUCATION_JOURNEY_STEPS, PASSIONS } from "../utils/data"
+import { useTranslation } from "react-i18next"
 
 
 const AboutSection = () => {
     const { isDarkMode } = useTheme()
+    const { t } = useTranslation();
     const sectionRef = useRef(null)
     const timelineRef = useRef(null)
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
@@ -77,14 +79,14 @@ const AboutSection = () => {
                             isDarkMode ? "text-purple-400" : "text-purple-600"
                         } mb-4`}
                     >
-                        About Me
+                        {t("about.aboutMe")}
                     </motion.div>
                     <motion.h2
                         variants={itemVariants}
                         className="text-4xl font-bold mb-6"
                     >
-                        Who I 
-                        <span className="text-blue-500 font-medium"> Am</span>
+                        {t("about.whoI")}
+                        <span className="text-blue-500 font-medium">{t("about.am")}</span>
                     </motion.h2>
                 </motion.div>
 
@@ -103,26 +105,20 @@ const AboutSection = () => {
                                     : "border-gray-300 bg-white backdrop-blur-sm"
                             }`}
                         >
-                            <h3 className="text-2xl font-medium mb-6">My Mission</h3>
+                            <h3 className="text-2xl font-medium mb-6">{t("about.myMission")}</h3>
                             <p
                                 className={`text-lg leading-relaxed mb-6 ${
                                     isDarkMode ? "text-gray-300" : "text-gray-700"
                                 }`}
                             >
-                                My mission is to empower individuals through technology
-                                and education, helping them unlock their full potential.
+                                {t("about.subtitle")}
                             </p>
                             <p
                                 className={`text-base leading-relaxed ${
                                     isDarkMode ? "text-gray-400" : "text-gray-600"
                                 }`}
                             >
-                                With a background in software development and a passion for
-                                teaching, I strive to create innovative solutions that make a
-                                positive impact on people's lives. Whether it's through
-                                mentoring aspiring developers or building accessible educational
-                                tools, I am committed to fostering a love for learning and
-                                helping others succeed in their journeys.
+                                {t("about.description")}
                             </p>
                         </motion.div>
 
@@ -130,7 +126,7 @@ const AboutSection = () => {
                             variants={itemVariants}
                             className="space-y-4"
                         >
-                            <h3 className="text-xl font-medium mb-6">What I Love Building</h3>
+                            <h3 className="text-xl font-medium mb-6">{t("about.myPassions")}</h3>
                             <div className="grid gap-4">
                                 {PASSIONS.map((passion, index) => (
                                     <motion.div
@@ -151,13 +147,13 @@ const AboutSection = () => {
                                             <passion.icon size={24} className="text-blue-500" />
                                         </div>
                                         <div>
-                                            <h4 className="font-medium mb-1">{passion.title}</h4>
+                                            <h4 className="font-medium mb-1">{t(passion.title)}</h4>
                                             <p
                                                 className={`text-sm ${
                                                     isDarkMode ? "text-gray-300" : "text-gray-700"
                                                 }`}
                                             >
-                                                {passion.description}
+                                                {t(passion.description)}
                                             </p>
                                         </div>
                                     </motion.div>
@@ -174,7 +170,7 @@ const AboutSection = () => {
                         className="relative"
                     >
                         <h3 className="text-2xl font-medium mb-8 text-center lg:text-left">
-                            My Developer Journey
+                            {t("about.education")}
                         </h3>
 
                         <div
@@ -183,7 +179,7 @@ const AboutSection = () => {
                             }`}
                         />
                         <div className="space-y-8">
-                            {JOURNEY_STEPS.map((step, index) => (
+                            {EDUCATION_JOURNEY_STEPS.map((step, index) => (
                                 <motion.div
                                     key={step.year}
                                     variants={stepVariants}
@@ -203,7 +199,7 @@ const AboutSection = () => {
                                         } backdrop-blur-sm`}
                                     >
                                         <div className="flex items-center justify-between mb-2">
-                                            <h4 className="text-xl font-medium">{step.title}</h4>
+                                            <h4 className="text-xl font-medium">{t(step.title)}</h4>
                                             <span
                                                 className={`text-sm px-3 py-1 rounded-full ${
                                                     isDarkMode
@@ -219,14 +215,14 @@ const AboutSection = () => {
                                                 isDarkMode ? "text-gray-300" : "text-gray-700"
                                             } mb-3`}
                                         >
-                                            {step.company}
+                                            {t(step.company)}
                                         </div>
                                         <p
                                             className={`text-sm leading-relaxed ${
                                                 isDarkMode ? "text-gray-400" : "text-gray-600"
                                             }`}
                                         >
-                                            {step.description}
+                                            {t(step.description)}
                                         </p>
                                     </div>
                                 </motion.div>
@@ -241,7 +237,7 @@ const AboutSection = () => {
                             isDarkMode ? "text-gray-400" : "text-gray-600"
                         } mb-4`}
                     >
-                        <em>Crafted with passion by</em>
+                        <em>{t("about.crafted")}</em>
                     </div>
                     <div className="text-lg font-medium text-primary mt-2">
                         Nabil Touche
@@ -260,7 +256,7 @@ const AboutSection = () => {
                                 isDarkMode ? "text-gray-400" : "text-gray-600"
                             }`}
                         >
-                            Ready to bring your ideas to life?
+                            {t("about.ready")}
                         </p>
 
                         <motion.button
@@ -268,7 +264,7 @@ const AboutSection = () => {
                             whileTap={{ scale: 0.98 }}
                             className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
                         >
-                            Let’s Work Together
+                            {t("about.work")}
                         </motion.button>
                     </motion.div>
                 </motion.div>

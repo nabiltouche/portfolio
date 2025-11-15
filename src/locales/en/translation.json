@@ -71,6 +71,47 @@
     "liveDemo": "Live Demo",
     "github": "Github"
   },
+  "about": {
+    "aboutMe": "About Me",
+    "whoI": "Who I",
+    "am": " Am",
+    "myMission": "My Mission",
+    "subtitle": "My mission is to empower individuals through technology and education, helping them unlock their full potential.",
+    "description": "With a background in software development and a passion for teaching, I strive to create innovative solutions that make a positive impact on people's lives. Whether it's through mentoring aspiring developers or building accessible educational tools, I am committed to fostering a love for learning and helping others succeed in their journeys.",
+    "myPassions": "My Passions",
+    "manga": {
+      "title": "Les mangas",
+      "description": "hihihi."
+    },
+    "animation": {
+      "title": "l'animation",
+      "description": "tout ça jeux et tt"
+    },
+    "voyage": {
+      "title": "les voyages",
+      "description": "partir et tt"
+    },
+    "education": "Education & Certifications",
+    "licence": {
+      "title": "Licence Info",
+      "company": "AMU",
+      "description": "c'etait dur"
+    },
+    "bafa": {
+      "title": "BAFA",
+      "company": "IFAC",
+      "description": "enb leger"
+    },
+    "bac": {
+      "title": "Bac",
+      "company": "st ex",
+      "description": "bac g on a dis"
+    },
+    "crafted": "Crafted with passion by",
+    "ready": "Ready to bring your ideas to life?",
+    "work": "Let’s Work Together"
+  },
+
   "footer": {
     "rights": "All rights reserved."
   }
