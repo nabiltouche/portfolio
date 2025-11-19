@@ -5,143 +5,153 @@
     "about": "About",
     "contact": "Contact"
   },
+
   "hero": {
     "work": "Full Stack Web Developer",
     "title1": "I build what you",
-    "title2": "imagine.",
-    "title3": "and make it unforgettable.",
-    "subtitle": "Passionate web developer, looking for new challenges.",
-    "viewWork": "View Work",
-    "getInTouch": "Get In Touch"
+    "title2": " imagine.",
+    "title3": "And make it unforgettable.",
+    "subtitle": "Passionate web developer, always looking for new challenges.",
+    "viewWork": "View my work",
+    "getInTouch": "Get in touch"
   },
+
   "skills": {
     "technicalExpertise": "Technical Expertise",
     "skillsTechnologies1": "Skills &",
     "skillsTechnologies2": " Technologies",
-    "presentationSkills": "The tools that bring your ideas to life.",
+    "presentationSkills": "The tools I use to bring your ideas to life.",
     "frontendTitle": "Frontend Development",
-    "frontendSubtitle": "Building responsive and dynamic user interfaces.",
+    "frontendSubtitle": "Creating modern, responsive and seamless interfaces.",
     "backendTitle": "Backend Development",
-    "backendSubtitle": "APIs, databases, and server-side logic.",
+    "backendSubtitle": "APIs, databases and server-side logic.",
     "toolsTitle": "Tools & Others",
     "toolsSubtitle": "Development tools and version control.",
-    "alsoWorkingWith": "Also Working With",
+    "alsoWorkingWith": "Also working with",
     "projectsCompleted": "Projects Completed",
     "technologies": "Technologies",
     "yearsOfExperience": "Years of Experience",
     "clientSatisfaction": "Client Satisfaction"
   },
+
   "project": {
     "preTitle": "My Work",
     "title1": "My",
     "title2": " Projects",
-    "description": "Here are some projects I’ve built as a web developer."
+    "description": "Here are some of the projects I’ve built as a web developer."
   },
-    "projectItems": {
+
+  "projectItems": {
     "portfolio": {
       "title": "Portfolio Website",
-      "description": "A modern responsive portfolio built with React and Tailwind CSS."
+      "description": "A modern, responsive portfolio built with React and Tailwind CSS."
     },
-    "taskManager": {
-      "title": "Task Manager App",
-      "description": "Full-stack task manager with user authentication and CRUD operations."
+    "caste": {
+      "title": "La Castellane Social Center",
+      "description": "A showcase website for a community center."
     },
-    "dashboard": {
-      "title": "E-commerce Dashboard",
-      "description": "Admin dashboard to manage products, orders, and analytics."
+    "um": {
+      "title": "Unité Marseillaise",
+      "description": "A showcase website for a nonprofit organization."
     },
-    "blog": {
-      "title": "Blog Platform",
-      "description": "A full-featured blog platform with comments and likes."
+    "gossipGirl": {
+      "title": "Gossip Girl",
+      "description": "Recreation of the Gossip Girl website."
     },
-    "weather": {
-      "title": "Weather App",
-      "description": "Displays current weather and forecast for any city using API."
-    },
-    "chat": {
-      "title": "Chat Application",
-      "description": "Real-time chat app with multiple rooms and emoji support."
-    },
-    "elearning": {
-      "title": "E-learning Platform",
-      "description": "Platform to create and follow online courses with quizzes."
+    "AnimConnect": {
+      "title": "AnimConnect",
+      "description": "AnimConnect application interface and features."
     }
   },
+
   "projectCard": {
     "liveDemo": "Live Demo",
     "github": "Github"
   },
+
   "about": {
     "aboutMe": "About Me",
     "whoI": "Who I",
     "am": " Am",
-    "myMission": "My Mission",
-    "subtitle": "My mission is to empower individuals through technology and education, helping them unlock their full potential.",
-    "description": "With a background in software development and a passion for teaching, I strive to create innovative solutions that make a positive impact on people's lives. Whether it's through mentoring aspiring developers or building accessible educational tools, I am committed to fostering a love for learning and helping others succeed in their journeys.",
+    "myMission": "My Story",
+    "subtitle": "A passionate web developer who loves turning ideas into modern, functional and well-crafted projects. Creating, coding and improving — that’s what drives me.",
+    "description": "And when I’m not coding, I’m an animator. I guide young people, create activities and bring memorable moments to life. Animation is about inspiring, teaching and supporting. It’s both a responsibility and a passion.",
     "myPassions": "My Passions",
+
     "manga": {
-      "title": "Les mangas",
-      "description": "hi."
+      "title": "Manga",
+      "description": "A universe I dive into every single time."
     },
     "animation": {
-      "title": "l'animation",
-      "description": "LOL"
+      "title": "Animation",
+      "description": "Creating, sharing, playing and imagining — animation is at the heart of my journey and my values."
     },
     "voyage": {
-      "title": "VOYAGE",
-      "description": "GO AWAY"
+      "title": "Travel",
+      "description": "Exploring new places, discovering cultures and broadening my perspective."
     },
+
     "education": "Education & Certifications",
+
     "licence": {
-      "title": "Licence Info",
-      "company": "AMU",
-      "description": "SO HARD"
+      "title": "Bachelor in Computer Science",
+      "company": "AMU – Aix-Marseille University",
+      "description": "A demanding program that built my foundations in development and algorithms."
     },
     "bafa": {
-      "title": "BAFA",
+      "title": "Youth Work Certification (BAFA)",
       "company": "IFAC",
-      "description": "GOOD JOB"
+      "description": "A training that taught me how to supervise, teach and create meaningful educational experiences."
     },
     "bac": {
-      "title": "Bac",
-      "company": "st ex",
-      "description": "BITCH"
+      "title": "High School Diploma",
+      "company": "Saint-Exupéry High School",
+      "description": "General Baccalaureate with Mathematics, Physics-Chemistry and Computer Science."
     },
+
     "crafted": "Crafted with passion by",
     "ready": "Ready to bring your ideas to life?",
-    "work": "Let’s Work Together"
+    "work": "Let's Work Together"
   },
 
   "contact": {
-    "letsConnect": "Let's Connect",
-    "getIn": "Get In",
-    "touch": " Touch",
-    "subtitle": "Ready to start your next project? Let's discuss how we can bring your ideas to life.",
+    "letsConnect": "Let’s Connect",
+    "getIn": "Get in",
+    "touch": " touch",
+
+    "subtitle": "Ready to start your next project? Let’s talk about how I can bring your ideas to life.",
+
     "sendMeMessage": "Send me a message",
     "yourName": "Your Name",
     "emailAddress": "Email Address",
     "yourMessage": "Your Message",
+
     "sending": "Sending...",
     "sendMessage": "Send Message",
+
     "information": "Contact Information",
-    "email": "email",
+
+    "email": "Email",
     "phone": "Phone",
-    "localisation": "localisation",
-    "follow": "Follow Me !",
+    "localisation": "Location",
+
+    "follow": "Follow me!",
+
     "available": "Available for work",
-    "workText": "I'm currently available for freelance projects and full-time opportunities.",
+    "workText": "I’m currently open to freelance projects and full-time opportunities.",
+
     "preferCall": "Prefer a quick call?",
     "callText": "Sometimes a conversation is worth a thousand messages. Feel free to schedule a call to discuss your project.",
     "scheduleCall": "Schedule a Call",
-    "messageSent": "Message Sent !",
-    "messageText": "Thank you for reaching out! I'll get back to you within 24 hours."
+
+    "messageSent": "Message Sent!",
+    "messageText": "Thanks for your message! I’ll get back to you within 24 hours."
   },
 
-
   "footer": {
-    "crafting": "Crafting digital experience with passion.",
-    "text": "Build with React & Framer Motion · TDesigned with care",
+    "crafting": "Digital experiences crafted with passion.",
+    "text": "Built with React & Framer Motion · Designed with care",
     "backToTop": "Back to top",
-    "allRight": "Time to Program. All rights reserved"
+    "allRight": "Time to code. All rights reserved"
   }
 }

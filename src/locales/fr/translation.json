@@ -18,7 +18,7 @@
     "technicalExpertise": "Compétences techniques",
     "skillsTechnologies1": "Compétences &",
     "skillsTechnologies2": " Technologies",
-    "presentationSkills": "Les outils qui donnent vie à tes idées.",
+    "presentationSkills": "Les outils que j'utilise pour donner vie à tes idées.",
     "frontendTitle": "Développement Front-End",
     "frontendSubtitle": "Créer des interfaces réactives, modernes et fluides.",
     "backendTitle": "Développement Back-End",
@@ -42,111 +42,104 @@
       "title": "Site Portfolio",
       "description": "Un portfolio moderne et responsive construit avec React et Tailwind CSS."
     },
-    "taskManager": {
-      "title": "Application de gestion de tâches",
-      "description": "Une application full-stack avec authentification et gestion des tâches."
+    "caste": {
+      "title": "Centre Social de La Castellane",
+      "description": "Un site vitrine pour un centre social."
     },
-    "dashboard": {
-      "title": "Tableau de bord E-commerce",
-      "description": "Un tableau de bord admin pour gérer produits, commandes et statistiques."
+    "um": {
+      "title": "Unité Marseillaise",
+      "description": "Site vitrine d'une association."
     },
-    "blog": {
-      "title": "Plateforme de blog",
-      "description": "Une plateforme de blog complète avec commentaires et système de likes."
+    "gossipGirl": {
+      "title": "Gossip Girl",
+      "description": "Reproduction du site Gossip Girl"
     },
-    "weather": {
-      "title": "Application météo",
-      "description": "Affiche la météo actuelle et les prévisions pour n’importe quelle ville."
-    },
-    "chat": {
-      "title": "Application de chat",
-      "description": "Une application de chat en temps réel avec salons et emojis."
-    },
-    "elearning": {
-      "title": "Plateforme E-learning",
-      "description": "Plateforme pour créer et suivre des cours en ligne avec quiz."
+    "AnimConnect": {
+      "title": "AnimConnect",
+      "description": "Application AnimConnect"
     }
   },
   "projectCard": {
     "liveDemo": "Démo en ligne",
     "github": "Github"
   },
+
   "about": {
-  "aboutMe": "À propos de moi",
-  "whoI": "Qui",
-  "am": " je suis",
-  "myMission": "Ma mission",
-  "subtitle": "Ma mission est d’accompagner les personnes grâce au numérique et à l’éducation, afin de leur permettre d’exprimer tout leur potentiel.",
-  "description": "Avec une expérience en développement logiciel et une véritable passion pour la transmission, je m’efforce de créer des solutions innovantes ayant un impact positif sur la vie des gens. Que ce soit en accompagnant de futurs développeurs ou en construisant des outils pédagogiques accessibles, je m’engage à transmettre le goût d’apprendre et à aider chacun à progresser dans son parcours.",
-  "myPassions": "Mes passions",
+    "aboutMe": "À propos de moi",
+    "whoI": "Qui",
+    "am": " suis-je ?",
+    "myMission": "Alors",
+    "subtitle": "Développeur web passionné, j’aime transformer des idées en projets modernes, fonctionnels et bien construits. Créer, coder, améliorer : c’est ce qui m’anime.",
+    "description": "Et quand je ne code pas, j’anime. J’accompagne des jeunes, je crée des activités, je fais vivre des moments qui marquent. L’animation, c’est inspirer, transmettre, guider… C’est autant une responsabilité qu’une passion.",
+    "myPassions": "Mes passions",
 
-  "manga": {
-    "title": "Les mangas",
-    "description": "Un univers créatif et inspirant qui nourrit mon imagination au quotidien."
-  },
-  "animation": {
-    "title": "L’animation",
-    "description": "Créer, transmettre, jouer, imaginer : l’animation est au cœur de mon parcours et de mes valeurs."
-  },
-  "voyage": {
-    "title": "Les voyages",
-    "description": "Découvrir de nouveaux horizons, apprendre d’autres cultures et élargir ma vision du monde."
-  },
+    "manga": {
+      "title": "Les Mangas",
+      "description": "Je plonge dans un univers à chaque fois."
+    },
+    "animation": {
+      "title": "L’animation",
+      "description": "Créer, transmettre, jouer, imaginer : l’animation est au cœur de mon parcours et de mes valeurs."
+    },
+    "voyage": {
+      "title": "Les voyages",
+      "description": "Découvrir de nouveaux horizons, apprendre d’autres cultures et élargir ma vision du monde."
+    },
 
-  "education": "Formations & Diplômes",
+    "education": "Formations & Diplômes",
 
-  "licence": {
-    "title": "Licence Informatique",
-    "company": "AMU – Aix-Marseille Université",
-    "description": "Un parcours exigeant qui m’a donné de solides bases en développement et en algorithmique."
-  },
-  "bafa": {
-    "title": "BAFA",
-    "company": "IFAC",
-    "description": "Une formation qui m’a appris à encadrer, transmettre et créer des expériences éducatives de qualité."
-  },
-  "bac": {
-    "title": "Baccalauréat",
-    "company": "Lycée Saint-Exupéry",
-    "description": "Une étape fondatrice qui a marqué le début de mon orientation vers l’informatique."
-  },
+    "licence": {
+      "title": "Licence Informatique",
+      "company": "AMU – Aix-Marseille Université",
+      "description": "Un parcours exigeant qui m'a donné de solides bases en développement et en algorithmique."
+    },
+    "bafa": {
+      "title": "Brevet d'Aptitude aux Fonctions d'Animateur",
+      "company": "IFAC",
+      "description": "Une formation qui m'a appris à encadrer, transmettre et créer des expériences éducatives de qualité."
+    },
+    "bac": {
+      "title": "Baccalauréat",
+      "company": "Lycée Saint-Exupéry",
+      "description": "Bac Général spécialité Mathématique, Physique Chimie et Numérique Sciences de l'Informatique"
+    },
 
-  "crafted": "Conçu avec passion par",
-  "ready": "Prêt à donner vie à vos idées ?",
-  "work": "Travaillons ensemble"
+    "crafted": "Conçu avec passion par",
+    "ready": "Prêt à donner vie à vos idées ?",
+    "work": "Travaillons ensemble"
   },
 
   "contact": {
-  "letsConnect": "Entrons en contact",
-  "getIn": "Prenez",
-  "touch": " contact",
-  
-  "subtitle": "Prêt à lancer votre prochain projet ? Discutons ensemble de la manière dont je peux donner vie à vos idées.",
+    "letsConnect": "Entrons en contact",
+    "getIn": "Prenez",
+    "touch": " contact",
+    
+    "subtitle": "Prêt à lancer votre prochain projet ? Discutons ensemble de la manière dont je peux donner vie à vos idées.",
 
-  "sendMeMessage": "Envoyez-moi un message",
-  "yourName": "Votre nom",
-  "emailAddress": "Adresse email",
-  "yourMessage": "Votre message",
+    "sendMeMessage": "Envoyez-moi un message",
+    "yourName": "Votre nom",
+    "emailAddress": "Adresse email",
+    "yourMessage": "Votre message",
 
-  "sending": "Envoi...",
-  "sendMessage": "Envoyer le message",
+    "sending": "Envoi...",
+    "sendMessage": "Envoyer le message",
 
-  "information": "Informations de contact",
+    "information": "Informations de contact",
 
-  "email": "Email",
-  "phone": "Téléphone",
-  "localisation": "Localisation",
+    "email": "Email",
+    "phone": "Téléphone",
+    "localisation": "Localisation",
 
-  "follow": "Suivez-moi !",
+    "follow": "Suivez-moi !",
 
-  "available": "Disponible pour travailler",
-  "workText": "Je suis actuellement disponible pour des projets freelance ou des opportunités à temps plein.",
+    "available": "Disponible pour travailler",
+    "workText": "Je suis actuellement disponible pour des projets freelance ou des opportunités à temps plein.",
 
-  "preferCall": "Vous préférez un appel rapide ?",
-  "callText": "Parfois, une conversation vaut mille messages. N’hésitez pas à planifier un appel pour discuter de votre projet.",
-  "scheduleCall": "Planifier un appel",
-  "messageSent": "Message envoyé !",
-  "messageText": "Merci pour votre message ! Je vous répondrai dans les 24 heures."
+    "preferCall": "Vous préférez un appel rapide ?",
+    "callText": "Parfois, une conversation vaut mille messages. N’hésitez pas à planifier un appel pour discuter de votre projet.",
+    "scheduleCall": "Planifier un appel",
+    "messageSent": "Message envoyé !",
+    "messageText": "Merci pour votre message ! Je vous répondrai dans les 24 heures."
 
   },
 

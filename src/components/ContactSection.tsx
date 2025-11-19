@@ -13,6 +13,9 @@ import { containerVariants, itemVariants } from "../utils/helper"
 import TextInput from "../input/TextInput"
 import SuccessModel from "./SuccessModel"
 import { useTranslation } from "react-i18next"
+import { send } from "@emailjs/browser";
+
+
 
 
 
@@ -26,6 +29,7 @@ const ContactSection = () => {
     });
     const [showSuccess, setShowSuccess] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
 
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px"});
@@ -44,16 +48,56 @@ const ContactSection = () => {
       });
     };
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      setIsSubmitting(true);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+  e.preventDefault();
 
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+  // --- VALIDATION ---
+  if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    alert("Veuillez remplir tous les champs.");
+    return;
+  }
 
-      setTimeout(() => setShowSuccess(false), 3000)
-    };
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    alert("Veuillez entrer un email valide.");
+    return;
+  }
+
+  const badWords = ["fuck", "shit", "pute", "fdp", "merde", "bitch", "enculé", "salope"];
+  if (badWords.some((w) => formData.message.toLowerCase().includes(w))) {
+    alert("Merci de rester respectueux.");
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const response = await send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+
+    console.log("SUCCESS EMAILJS:", response);
+
+    setShowSuccess(true);
+    setFormData({ name: "", email: "", message: "" });
+
+    setTimeout(() => setShowSuccess(false), 3000);
+
+  } catch (error) {
+    console.error("EMAILJS ERROR:", error);
+    alert("Erreur lors de l'envoi. Réessayez plus tard.");
+  }
+
+  setIsSubmitting(false);
+};
+
+
 
   return (
     <section
@@ -304,7 +348,8 @@ const ContactSection = () => {
               >
                 {t("contact.callText")}
               </p>
-              <motion.button
+              <motion.a
+                href={`tel:${phoneNumber}`}
                 whileHover={{ y: -2, scale: 1.05 }}
                 whileTap={{scale: 0.98 }}
                 className={`px-6 py-3 rounded-full border font-medium transition-all duration-300 ${
@@ -314,7 +359,7 @@ const ContactSection = () => {
                 }`}
               >
                 {t("contact.scheduleCall")}
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
           

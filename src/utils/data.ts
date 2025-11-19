@@ -1,10 +1,10 @@
 import { FaCode, FaServer, FaTools } from "react-icons/fa"
 import { Code, Heart, Globe } from "lucide-react"
-import PROJECT_IMG_1 from "../assets/images/nab.jpg"
-import PROJECT_IMG_2 from "../assets/images/nab.jpg"
-import PROJECT_IMG_3 from "../assets/images/nab.jpg"
-import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi"
+import portfolio_img from "../assets/images/portfolio_img.webp"
+import { FiGithub, FiInstagram, FiLinkedin, FiX } from "react-icons/fi"
 
+const phone = import.meta.env.VITE_PHONE_NUMBER_VISU;
+const email = import.meta.env.VITE_EMAIL;
 
 
 export const SKILLS_CATEGORY = [
@@ -65,91 +65,25 @@ export const PROJECTS = [
     id: 1,
     title: "projectItems.portfolio.title",
     description: "projectItems.portfolio.description",
-    image: PROJECT_IMG_1,
-    tags: ["React", "Tailwind"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
+    image: portfolio_img,
+    tags: ["React", "Tailwind", "Motion"],
+    liveUrl: "https://nabiltouche.vercel.app",
+    githubUrl: "https://github.com/nabiltouche/portfolio",
     featured: true,
     category: "Front End",
-  },
-  {
-    id: 2,
-    title: "projectItems.taskManager.title",
-    description: "projectItems.taskManager.description",
-    image: PROJECT_IMG_2,
-    tags: ["React", "Node.js", "MongoDB"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
-    featured: false,
-    category: "Full-Stack",
-  },
-  {
-    id: 3,
-    title: "projectItems.dashboard.title",
-    description: "projectItems.dashboard.description",
-    image: PROJECT_IMG_3,
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
-    featured: false,
-    category: "Full-Stack",
-  },
-  {
-    id: 4,
-    title: "projectItems.blog.title",
-    description: "projectItems.blog.description",
-    image: PROJECT_IMG_1,
-    tags: ["React", "Node.js", "MongoDB"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
-    featured: false,
-    category: "Full-Stack",
-  },
-  {
-    id: 5,
-    title: "projectItems.weather.title",
-    description: "projectItems.weather.description",
-    image: PROJECT_IMG_2,
-    tags: ["React", "Tailwind", "API"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
-    featured: false,
-    category: "Front End",
-  },
-  {
-    id: 6,
-    title: "projectItems.chat.title",
-    description: "projectItems.chat.description",
-    image: PROJECT_IMG_3,
-    tags: ["React", "Node.js", "Socket.io"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
-    featured: false,
-    category: "Full-Stack",
-  },
-  {
-    id: 7,
-    title: "projectItems.elearning.title",
-    description: "projectItems.elearning.description",
-    image: PROJECT_IMG_1,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    liveUrl: "https://youtube.com",
-    githubUrl: "https://youtube.com",
-    featured: false,
-    category: "Full-Stack",
-  },
+  }
 ]
 
 export const CONTACT_INFO = [
   {
     icon: Code,
     label: "contact.email",
-    value: "exemple@email.com",
+    value: "nabiltouchepro@gmail.com",
   },
   {
     icon: Code,
-    label: "contact.phone",
-    value: "+33 6 12 34 56 78",
+    label: email,
+    value: phone,
   },
   {
     icon: Code,
@@ -162,21 +96,28 @@ export const SOCIAL_LINKS = [
   {
     name: "GITHUB",
     icon: FiGithub,
-    url: "https://github.com/",
+    url: "https://github.com/nabiltouche",
     color: "#fff",
     bgColor: "#000",
   },
   {
     name: "LINKEDIN",
     icon: FiLinkedin,
-    url: "https://linkedin.com/",
+    url: "https://linkedin.com/nabil-touche-771baa213",
     color: "#fff",
     bgColor: "#0A66C2",
   },
   {
     name: "INSTAGRAM",
     icon: FiInstagram,
-    url: "https://instagram.com/",
+    url: "https://instagram.com/babi_kdb13",
+    color: "#fff",
+    bgColor: "#E4405F",
+  },
+  {
+    name: "X",
+    icon: FiX,
+    url: "https://x.com/babi_rhawey",
     color: "#fff",
     bgColor: "#E4405F",
   },
@@ -202,7 +143,7 @@ export const PASSIONS = [
 
 export const EDUCATION_JOURNEY_STEPS = [
   {
-    year: "2025",
+    year: "2024",
     title: "about.licence.title",
     company: "about.licence.company",
     description: "about.licence.description",
@@ -210,7 +151,7 @@ export const EDUCATION_JOURNEY_STEPS = [
     color: "#0A66C2",
   },
   {
-    year: "2024",
+    year: "2021",
     title: "about.bafa.title",
     company: "about.bafa.company",
     description: "about.bafa.description",
@@ -218,7 +159,7 @@ export const EDUCATION_JOURNEY_STEPS = [
     color: "#F59E0B",
   },
   {
-    year: "2023",
+    year: "2021",
     title: "about.bac.title",
     company: "about.bac.company",
     description: "about.bac.description",
