@@ -128,7 +128,9 @@
 
     "sending": "Sending...",
     "sendMessage": "Send Message",
-
+    "champs": "This field is required.",
+    "adresseValid": "Invalid email address.",
+    "errorSending": "Unable to send the message. Please try again in a moment.",
     "information": "Contact Information",
 
     "email": "Email",

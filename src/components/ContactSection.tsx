@@ -59,23 +59,23 @@ const ContactSection = () => {
       let isValid = true;
 
       if (!formData.name.trim()) {
-        newErrors.name = "Ce champ est obligatoire.";
+        newErrors.name = t("contact.champs");
         isValid = false;
       }
 
       if (!formData.email.trim()) {
-        newErrors.email = "Ce champ est obligatoire.";
+        newErrors.email = t("contact.champs");
         isValid = false;
       } else {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
-          newErrors.email = "Adresse email invalide.";
+          newErrors.email = t("contact.adresseValid");
           isValid = false;
         }
       }
 
       if (!formData.message.trim()) {
-        newErrors.message = "Ce champ est obligatoire.";
+        newErrors.message = t("contact.champs");
         isValid = false;
       }
 
@@ -117,7 +117,7 @@ const ContactSection = () => {
 
         setErrors((prev) => ({
           ...prev,
-          general: "Impossible d'envoyer le message. Réessaie dans quelques instants.",
+          general: t("contact.errorSending"),
         }));
       }
 
@@ -186,7 +186,7 @@ const ContactSection = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start mb-5">
+          <div className="flex justify-center mb-5 px-4">
             {/* Contact Form */}
             <motion.div
               initial="hidden"
@@ -195,7 +195,7 @@ const ContactSection = () => {
             >
               <motion.div
                 variants={itemVariants}
-                className={`p-8 rounded-2xl border ${
+                className={`w-full max-w-xl md:max-w-2xl p-10 rounded-2xl border ${
                   isDarkMode
                     ? "bg-gray-800/50 border-gray-700 backdrop-blur-sm"
                     : "bg-gray-50/80 border-gray-200 backdrop-blur-sm"
@@ -205,7 +205,7 @@ const ContactSection = () => {
 
                 {/*  FORMULAIRE */}
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-6">
                     <TextInput
                       isDarkMode={isDarkMode}
                       value={formData.name}

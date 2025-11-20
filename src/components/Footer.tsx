@@ -27,26 +27,20 @@ const Footer = () => {
         {
             name: 'Github',
             icon: FiGithub,
-            url: 'https://github.com',
+            url: 'https://github.com/nabiltouche',
             color: 'hover:text-gray-400'
         },
         {
             name: 'LinkedIn',
             icon: FiLinkedin,
-            url: 'https://linkedin.com',
+            url: 'https://www.linkedin.com/in/nabil-touche-771baa213/',
             color: 'hover:text-blue-400'
         },
         {
             name: 'Twitter',
             icon: FiTwitter,
-            url: 'https://twitter.com',
+            url: 'https://x.com/babi_rhawey',
             color: 'hover:text-sky-400'
-        },
-        {
-            name: 'Email',
-            icon: Mail, 
-            url: 'mailto:nabiltouchepro@gmail.com',
-            color: 'hover:text-green-400'
         }
     ];
 

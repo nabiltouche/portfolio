@@ -103,7 +103,7 @@ export const SOCIAL_LINKS = [
   {
     name: "LINKEDIN",
     icon: FiLinkedin,
-    url: "https://linkedin.com/nabil-touche-771baa213",
+    url: "https://www.linkedin.com/in/nabil-touche-771baa213/",
     color: "#fff",
     bgColor: "#0A66C2",
   },
