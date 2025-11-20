@@ -27,6 +27,13 @@ const ContactSection = () => {
         email: "",
         message: "",
     });
+    const [errors, setErrors] = useState({
+      name: "",
+      email: "",
+      message: "",
+      general: "",
+    });
+
     const [showSuccess, setShowSuccess] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false)
     const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
@@ -47,55 +54,77 @@ const ContactSection = () => {
         [key]: value,
       });
     };
+    const validateForm = () => {
+      const newErrors = { name: "", email: "", message: "", general: "" };
+      let isValid = true;
+
+      if (!formData.name.trim()) {
+        newErrors.name = "Ce champ est obligatoire.";
+        isValid = false;
+      }
+
+      if (!formData.email.trim()) {
+        newErrors.email = "Ce champ est obligatoire.";
+        isValid = false;
+      } else {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+          newErrors.email = "Adresse email invalide.";
+          isValid = false;
+        }
+      }
+
+      if (!formData.message.trim()) {
+        newErrors.message = "Ce champ est obligatoire.";
+        isValid = false;
+      }
+
+      setErrors(newErrors);
+      return isValid;
+    };
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+      e.preventDefault();
 
-  // --- VALIDATION ---
-  if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-    alert("Veuillez remplir tous les champs.");
-    return;
-  }
+      // reset erreurs
+      setErrors({ name: "", email: "", message: "", general: "" });
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email)) {
-    alert("Veuillez entrer un email valide.");
-    return;
-  }
+      // validation
+      if (!validateForm()) return;
 
-  const badWords = ["fuck", "shit", "pute", "fdp", "merde", "bitch", "enculé", "salope"];
-  if (badWords.some((w) => formData.message.toLowerCase().includes(w))) {
-    alert("Merci de rester respectueux.");
-    return;
-  }
+      setIsSubmitting(true);
 
-  setIsSubmitting(true);
+      try {
+        const res = await send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
 
-  try {
-    const response = await send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    );
+        console.log("EMAILJS SUCCESS:", res);
 
-    console.log("SUCCESS EMAILJS:", response);
+        setShowSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
 
-    setShowSuccess(true);
-    setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setShowSuccess(false), 3000);
+      } catch (error) {
+        console.error("EMAILJS ERROR:", error);
 
-    setTimeout(() => setShowSuccess(false), 3000);
+        setErrors((prev) => ({
+          ...prev,
+          general: "Impossible d'envoyer le message. Réessaie dans quelques instants.",
+        }));
+      }
 
-  } catch (error) {
-    console.error("EMAILJS ERROR:", error);
-    alert("Erreur lors de l'envoi. Réessayez plus tard.");
-  }
+      setIsSubmitting(false);
+    };
 
-  setIsSubmitting(false);
-};
+
 
 
 
@@ -182,6 +211,7 @@ const ContactSection = () => {
                       value={formData.name}
                       handleInputChange={(text) => handleInputChange("name", text)}
                       label={t("contact.yourName")}
+                      error={errors.name}
                     />
 
                     <TextInput
@@ -189,6 +219,7 @@ const ContactSection = () => {
                       value={formData.email}
                       handleInputChange={(text) => handleInputChange("email", text)}
                       label={t("contact.emailAddress")}
+                      error={errors.email}
                     />
                   </div>
 
@@ -197,6 +228,7 @@ const ContactSection = () => {
                     value={formData.message}
                     handleInputChange={(text) => handleInputChange("message", text)}
                     label={t("contact.yourMessage")}
+                    error={errors.message}
                     textarea
                   />
 
