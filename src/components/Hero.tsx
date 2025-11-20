@@ -186,8 +186,8 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => scrollToSection('work')}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 "
+                  onClick={() => scrollToSection('projects')}
+                  className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 "
                 >
                   {t("hero.viewWork")}
                 </motion.button>
@@ -196,7 +196,7 @@ const Hero = () => {
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => scrollToSection("contact")}
-                  className={`border ${
+                  className={`border cursor-pointer ${
                     isDarkMode
                       ? "border-gray-700 hover:border-gray-600 text-gray-300"
                       : "border-gray-300 hover:border-gray-400 text-gray-700"
@@ -213,9 +213,9 @@ const Hero = () => {
                 className="flex justify-center space-x-6 mb-8"
               >
                 {[
-                  { icon: FiGithub, href: "#" },
-                  { icon: FiLinkedin, href: "#" },
-                  { icon: Mail, href: "mailto:nabiltouchepro@gmail.com" },
+                  { icon: FiGithub, href: "https://github.com/nabiltouche/" },
+                  { icon: FiLinkedin, href: "https://www.linkedin.com/in/nabil-touche-771baa213/" },
+                  { icon: Mail, href: `mailto:${import.meta.env.VITE_EMAIL}` },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
@@ -324,8 +324,8 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => scrollToSection('work')}
-                  className="bg-primary hover:bg-primary text-text px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
+                  onClick={() => scrollToSection('projects')}
+                  className="cursor-pointer bg-primary hover:bg-primary text-text px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
                 >
                   {t("hero.viewWork")}
                 </motion.button>
@@ -333,7 +333,7 @@ const Hero = () => {
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => scrollToSection("contact")}
-                  className={`border ${
+                  className={`border cursor-pointer ${
                   isDarkMode
                     ? "border-gray-700 hover:border-gray-600 text-gray-300"
                     : "border-gray-300 hover:border-gray-400 text-gray-700"
@@ -349,9 +349,9 @@ const Hero = () => {
                 className="flex space-x-6 mb-12"
               >
                 {[
-                  { icon: FiGithub, href: "#" },
-                  { icon: FiLinkedin, href: "#" },
-                  { icon: Mail, href: "mailto:nabiltouchepro@gmail.com" },
+                  { icon: FiGithub, href: "https://github.com/nabiltouche/" },
+                  { icon: FiLinkedin, href: "https://www.linkedin.com/in/nabil-touche-771baa213/" },
+                  { icon: Mail, href: `mailto:${import.meta.env.VITE_EMAIL}` },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
