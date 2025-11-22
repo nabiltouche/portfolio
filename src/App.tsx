@@ -12,15 +12,17 @@ const App = () => {
     <ThemeProvider>
       <div className="">
         <Navbar />
-        <Hero />
-        <SkillsSection />
-        <ProjectsSection />
-        <AboutSection />
-        <ContactSection />
+        <main>
+          <Hero />
+          <SkillsSection />
+          <ProjectsSection />
+          <AboutSection />
+          <ContactSection />
+        </main>
         <Footer />
       </div>
     </ThemeProvider>
   )
 }
 
-export default App 
+export default App

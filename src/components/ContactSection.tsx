@@ -132,7 +132,7 @@ const ContactSection = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className={`pu-24 px-6 ${
+      className={`scroll-mt-32 pu-24 px-6 ${
         isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       } relative overflow-hidden`}
     >

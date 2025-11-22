@@ -42,9 +42,9 @@
       "title": "Site Portfolio",
       "description": "Un portfolio moderne et responsive construit avec React et Tailwind CSS."
     },
-    "caste": {
-      "title": "Centre Social de La Castellane",
-      "description": "Un site vitrine pour un centre social."
+    "centre": {
+      "title": "AEC La Castellane",
+      "description": "Un site vitrine pour le centre social de La Castellane (en cours de production)."
     },
     "um": {
       "title": "Unité Marseillaise",

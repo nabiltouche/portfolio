@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useTheme } from "../context/useTheme"
 import { motion, AnimatePresence } from "framer-motion"
 import { Sun, Moon, Menu, X } from "lucide-react"
-import logo from "../assets/images/logoNabik.png"
+import logo from "../assets/images/logoNabik.webp"
 import frFlag from "../assets/flags/fr.png"
 import enFlag from "../assets/flags/gb.png"
 import { useTranslation } from "react-i18next"
@@ -45,8 +45,11 @@ const links = [
   }
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")
-  }
+  const newLang = i18n.language === "fr" ? "en" : "fr"
+  i18n.changeLanguage(newLang)
+  localStorage.setItem("language", newLang)
+}
+
 
   useEffect(() => {
     const handleResize = () => {

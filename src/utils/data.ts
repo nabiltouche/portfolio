@@ -1,6 +1,7 @@
 import { FaCode, FaServer, FaTools } from "react-icons/fa"
 import { Code, Heart, Globe } from "lucide-react"
 import portfolio_img from "../assets/images/portfolio_img.webp"
+import centre_img from "../assets/images/centre_img.webp"
 import { FiGithub, FiInstagram, FiLinkedin, FiX } from "react-icons/fi"
 
 const phone = import.meta.env.VITE_PHONE_NUMBER_VISU;
@@ -28,7 +29,7 @@ export const SKILLS_CATEGORY = [
       { name: "Node.js", level: 85, color: "bg-green-500" },
       { name: "Express", level: 80, color: "bg-gray-700" },
       { name: "MongoDB", level: 75, color: "bg-green-600" },
-      { name: "MySQL", level: 70, color: "bg-blue-600" },
+      { name: "PostgreSQL", level: 70, color: "bg-blue-600" },
     ],
   },
   {
@@ -44,14 +45,14 @@ export const SKILLS_CATEGORY = [
 ]
 
 export const TECH_STACK = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Tailwind CSS",
-  "Node.js",
-  "MongoDB",
-  "MySQL",
+  "Java",
+  "Spring Boot",
+  "Python",
+  "Django",
+  "AWS",
+  "AI Integration",
+  "Figma",
+  "Canva",
 ]
 
 export const STATS = [
@@ -71,6 +72,17 @@ export const PROJECTS = [
     githubUrl: "https://github.com/nabiltouche/portfolio",
     featured: true,
     category: "Front End",
+  },
+  {
+    id: 2,
+    title: "projectItems.centre.title",
+    description: "projectItems.centre.description",
+    image: centre_img,
+    tags: ["Next.js", "Tailwind", "Motion"],
+    liveUrl: "#",
+    githubUrl: "#",
+    featured: false,
+    category: "Full Stack",
   }
 ]
 

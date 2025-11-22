@@ -51,6 +51,7 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                 />
                 {/* Featured Badge */}
                 {project.featured && (

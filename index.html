@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,20 +9,17 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Portfolio Website</title>
+    <title>Nabil Touche - Développeur Web React / Next.js | Portfolio Professionnel</title>
+    <meta name="description" content="Nabil Touche, développeur web full-stack spécialisé React et TypeScript. Découvrez mes projets, compétences et services en développement moderne.">
+
+    <meta property="og:title" content="Nabil Touche - Développeur Web React / Next.js | Portfolio Professionnel">
+    <meta property="og:description" content="Portfolio de Nabil Touche, développeur web full-stack spécialisé React et TypeScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nabiltouche.fr">
+    <meta property="og:image" content="public/images/og-image.png">
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-
-  <script>
-    (() => {
-      const saved = localStorage.getItem("isDarkMode");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (saved === "true" || (saved === null && prefersDark)) {
-        document.documentElement.classList.add("dark");
-      }
-    })();
-  </script>
 </html>

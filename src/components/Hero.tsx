@@ -15,7 +15,7 @@ import {
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { useTheme } from '../context/useTheme';
 
-import Profil from '../assets/images/profile-img.png';
+import Profil from '../assets/images/profile-img.webp';
 import { containerVariants, itemVariants } from '../utils/helper';
 
 
