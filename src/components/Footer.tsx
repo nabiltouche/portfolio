@@ -1,13 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import { useRef } from "react"
 import { easeInOut, motion, useInView, useScroll, useTransform} from 'framer-motion';
 import {
-    Mail,
     Heart,
     ArrowUp,
     Code2,
-    ArrowDown
 } from 'lucide-react';
 import { useTheme } from '../context/useTheme'
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";

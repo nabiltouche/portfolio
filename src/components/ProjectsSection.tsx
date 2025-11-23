@@ -1,5 +1,4 @@
 import { motion, useInView } from "framer-motion"
-// import { ArrowUpRight, Code2, Globe, Users, Zap } from "lucide-react"
 import { useRef } from "react"
 import { useTheme } from "../context/useTheme"
 import { PROJECTS } from "../utils/data"

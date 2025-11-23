@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { motion, easeOut, useInView, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { useTheme } from "../context/useTheme"
@@ -128,7 +127,7 @@ const AboutSection = () => {
                         >
                             <h3 className="text-xl font-medium mb-6">{t("about.myPassions")}</h3>
                             <div className="grid gap-4">
-                                {PASSIONS.map((passion, index) => (
+                                {PASSIONS.map((passion) => (
                                     <motion.div
                                         key={passion.title}
                                         variants={itemVariants}
@@ -179,7 +178,7 @@ const AboutSection = () => {
                             }`}
                         />
                         <div className="space-y-8">
-                            {EDUCATION_JOURNEY_STEPS.map((step, index) => (
+                            {EDUCATION_JOURNEY_STEPS.map((step) => (
                                 <motion.div
                                     key={step.year}
                                     variants={stepVariants}

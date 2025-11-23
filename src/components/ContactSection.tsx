@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useRef } from "react"
 import {
   motion,
@@ -275,7 +274,7 @@ const ContactSection = () => {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-medium mb-6">{t("contact.information")}</h3>
               <div className="space-y-4">
-                {CONTACT_INFO.map((info, index) => (
+                {CONTACT_INFO.map((info) => (
                   <motion.div
                     key={info.label}
                     variants={itemVariants}

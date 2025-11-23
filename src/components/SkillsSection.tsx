@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { use, useRef } from "react"
-import { delay, motion, useInView, useScroll, useTransform, type Easing, type Variants } from "framer-motion"
+import { useRef } from "react"
+import { motion, useInView, useScroll, useTransform, type Easing, type Variants } from "framer-motion"
 
 import { useTheme } from "../context/useTheme"
 import { SKILLS_CATEGORY, STATS, TECH_STACK } from "../utils/data";
@@ -101,7 +100,7 @@ const SkillsSection = () => {
             variants={containerVariants}
             className=""
         >
-            {SKILLS_CATEGORY.map((category, index) => (
+            {SKILLS_CATEGORY.map((category) => (
                 <motion.div
                     key={category.title}
                     variants={itemVariants}
@@ -133,7 +132,7 @@ const SkillsSection = () => {
                     </div>
                     {/* Skills List */}
                     <div className="">
-                        {category.skills.map((skill, skillIndex) => (
+                        {category.skills.map((skill) => (
                             <div key={skill.name} className="group">
                                 <div className="flex justify-between items-center mb-2">
                                     <span className="text-sm font-medium">{skill.name}</span>
@@ -183,7 +182,7 @@ const SkillsSection = () => {
                 variants={itemVariants}
                 className="flex flex-wrap justify-center gap-3"
             >
-                {TECH_STACK.map((tech, index) => (
+                {TECH_STACK.map((tech) => (
                     <motion.span
                         key={tech}
                         whileHover={{ y: -2, scale: 1.05}}
@@ -206,7 +205,7 @@ const SkillsSection = () => {
             variants={containerVariants}
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
-            {STATS.map((stat, index) => (
+            {STATS.map((stat) => (
                 <motion.div
                     key={stat.label}
                     variants={itemVariants}
