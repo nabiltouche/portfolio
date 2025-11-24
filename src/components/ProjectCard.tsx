@@ -21,10 +21,7 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
 
   useEffect(() => {
     const touchDetected =
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      navigator.maxTouchPoints > 0
-
+      "ontouchstart" in window || navigator.maxTouchPoints > 0
     setIsTouch(touchDetected)
   }, [])
 
@@ -41,17 +38,11 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
     },
   }
 
-  const handleCardClick = () => {
-    if (!isTouch) return
-    setShowButtons((prev) => !prev)
-  }
-
   return (
     <motion.div
       variants={cardVariants}
       whileHover={!isTouch ? { y: -8 } : {}}
-      className="group relative cursor-pointer"
-      onClick={handleCardClick}
+      className="group relative"
     >
       <div
         className={`rounded-2xl overflow-hidden border transition-all duration-500 ${
@@ -93,33 +84,47 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
             </span>
           </div>
 
-          {/* OVERLAY – visible au hover OR si mobile + clicked */}
-          <div
-            className={`
-              absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center space-x-4 transition-opacity duration-300
-              ${isTouch ? (showButtons ? "opacity-100" : "opacity-0") : "opacity-0 group-hover:opacity-100"}
-            `}
-          >
-            {/* LIVE BUTTON */}
-            <a
-              href={project.liveUrl}
-              onClick={(e) => isTouch && e.stopPropagation()}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium transition-colors"
-            >
-              <ExternalLink size={20} />
-              <span>{t("projectCard.liveDemo")}</span>
-            </a>
+          {/* DESKTOP OVERLAY */}
+          {!isTouch && (
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex items-center justify-center space-x-4 transition-opacity duration-300">
+              <a
+                href={project.liveUrl}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium"
+              >
+                <ExternalLink size={20} />
+                <span>{t("projectCard.liveDemo")}</span>
+              </a>
 
-            {/* GITHUB BUTTON */}
-            <a
-              href={project.githubUrl}
-              onClick={(e) => isTouch && e.stopPropagation()}
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium transition-all"
-            >
-              <FiGithub size={20} />
-              <span>{t("projectCard.github")}</span>
-            </a>
-          </div>
+              <a
+                href={project.githubUrl}
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium"
+              >
+                <FiGithub size={20} />
+                <span>{t("projectCard.github")}</span>
+              </a>
+            </div>
+          )}
+
+          {/* MOBILE BUTTONS */}
+          {isTouch && showButtons && (
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center space-x-4 transition-opacity duration-300">
+              <a
+                href={project.liveUrl}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium"
+              >
+                <ExternalLink size={20} />
+                <span>{t("projectCard.liveDemo")}</span>
+              </a>
+
+              <a
+                href={project.githubUrl}
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium"
+              >
+                <FiGithub size={20} />
+                <span>{t("projectCard.github")}</span>
+              </a>
+            </div>
+          )}
         </div>
 
         {/* TEXT */}
@@ -127,6 +132,7 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
           <h3 className="text-xl font-medium mb-3 group-hover:text-primary transition-colors">
             {t(project.title)}
           </h3>
+
           <p
             className={`text-sm leading-relaxed mb-4 ${
               isDarkMode ? "text-gray-400" : "text-gray-600"
@@ -136,11 +142,11 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
           </p>
 
           {/* TAGS */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.tags.map((tag, tagIndex) => (
               <span
                 key={tagIndex}
-                className={`text-xs px-3 py-1 rounded-full font ${
+                className={`text-xs px-3 py-1 rounded-full ${
                   isDarkMode
                     ? "bg-gray-800/80 text-gray-300"
                     : "bg-gray-200 text-gray-700"
@@ -150,6 +156,16 @@ const ProjectCard = ({ project, index, isDarkMode }: ProjectCardProps) => {
               </span>
             ))}
           </div>
+
+          {/* MOBILE BUTTON – "EN SAVOIR +" */}
+          {isTouch && (
+            <button
+              onClick={() => setShowButtons((v) => !v)}
+              className="w-full mt-2 px-4 py-2 text-sm rounded-full bg-primary text-white font-medium active:scale-95 transition-all"
+            >
+              {showButtons ? t("projectCard.hide") : t("projectCard.more")}
+            </button>
+          )}
         </div>
       </div>
     </motion.div>
