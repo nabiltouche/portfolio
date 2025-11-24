@@ -197,5 +197,66 @@ html, body {
   animation-delay: 0.3s;
 }
 
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp .7s ease forwards;
+}
+
+.fade-up-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp .7s ease forwards;
+  animation-delay: .25s;
+}
+
+.social-anim {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp .6s ease forwards;
+}
+
+.animate-heart {
+  animation: heartBeat 2s infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.animate-line {
+  animation: lineGrow 1.5s ease forwards;
+}
+
+@keyframes lineGrow {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
+.animate-line-move {
+  animation: lineMove 6s linear infinite;
+}
+
+@keyframes lineMove {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(calc(100vw + 50%)); }
+}
+
+.animate-rotate-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 @custom-variant dark (&:where(.dark, .dark *));
