@@ -111,4 +111,49 @@ html, body {
   }
 }
 
+.fade-init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.fade-up-delay {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: .2s;
+}
+
+.fade-left {
+  animation: fadeLeft 0.7s ease forwards;
+}
+
+.hover-x {
+  transition: transform .3s ease;
+}
+
+.hover-x:hover {
+  transform: translateX(4px);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 @custom-variant dark (&:where(.dark, .dark *));
