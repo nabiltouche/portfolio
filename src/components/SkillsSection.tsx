@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { useTheme } from "../context/useTheme"
 import { SKILLS_CATEGORY, STATS, TECH_STACK } from "../utils/data"
 import { useTranslation } from "react-i18next"
@@ -9,6 +9,7 @@ const SkillsSection = () => {
   const { t } = useTranslation()
 
   const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, margin: "-150px" })
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -40,16 +41,20 @@ const SkillsSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
 
-        <div className="text-center mb-20 fade-up">
+        <div className={`text-center mb-20 ${isInView ? "fade-up" : "fade-init"}`}>
           <div
-            className={`text-sm uppercase tracking-widest ${
+            className={`text-sm uppercase tracking-widest mb-4 ${
               isDarkMode ? "text-primary" : "text-text"
-            } mb-4 fade-up-delay`}
+            } ${isInView ? "fade-up-delay" : "fade-init"}`}
           >
             {t("skills.technicalExpertise")}
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-light mb-6 fade-up-delay">
+          <h2
+            className={`text-3xl md:text-5xl font-light mb-6 ${
+              isInView ? "fade-up-delay" : "fade-init"
+            }`}
+          >
             {t("skills.skillsTechnologies1")}
             <span className="text-blue-500 font-medium">
               {t("skills.skillsTechnologies2")}
@@ -57,15 +62,15 @@ const SkillsSection = () => {
           </h2>
 
           <p
-            className={`text-lg ${
-              isDarkMode ? "text-primary" : "text-text"
-            } max-w-2xl mx-auto font-light fade-up-delay`}
+            className={`text-lg max-w-2xl mx-auto font-light ${
+              isInView ? "fade-up-delay" : "fade-init"
+            }`}
           >
             {t("skills.presentationSkills")}
           </p>
         </div>
 
-        <div className="grid gap-10 fade-up">
+        <div className={`grid gap-10 ${isInView ? "fade-up" : "fade-init"}`}>
           {SKILLS_CATEGORY.map((category) => (
             <div
               key={category.title}
@@ -73,18 +78,19 @@ const SkillsSection = () => {
                 isDarkMode
                   ? "bg-gray-900/50 border-gray-800 backdrop-blur-sm"
                   : "bg-white/50 border-gray-200 backdrop-blur-sm"
-              } fade-up`}
+              } ${isInView ? "fade-up" : "fade-init"}`}
             >
               <div className="flex items-center mb-6">
                 <div
-                  className={`p-3 rounded-xl ${
+                  className={`p-3 rounded-xl mr-4 ${
                     isDarkMode ? "bg-primary/10" : "bg-text/10"
-                  } mr-4 fade-left`}
+                  } ${isInView ? "fade-left" : "fade-init"}`}
                 >
                   <category.icon size={24} className="text-blue-500" />
                 </div>
+
                 <div>
-                  <h3 className="font-medium">{t(category.title)}</h3>
+                  <h3>{t(category.title)}</h3>
                   <p
                     className={`text-sm ${
                       isDarkMode ? "text-primary" : "text-text"
@@ -97,7 +103,12 @@ const SkillsSection = () => {
 
               <div>
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="group mb-5 fade-up-delay">
+                  <div
+                    key={skill.name}
+                    className={`group mb-5 ${
+                      isInView ? "fade-up-delay" : "fade-init"
+                    }`}
+                  >
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm font-medium">{skill.name}</span>
                       <span
@@ -116,10 +127,10 @@ const SkillsSection = () => {
                     >
                       <div
                         style={{ width: `${skill.level}%` }}
-                        className={`h-full ${skill.color} rounded-full bar-animate`}
-                      >
-                        <div className="absolute inset-0 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </div>
+                        className={`h-full ${skill.color} rounded-full ${
+                          isInView ? "bar-animate" : ""
+                        }`}
+                      />
                     </div>
                   </div>
                 ))}
@@ -128,12 +139,20 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center fade-up">
-          <h3 className="text-xl font-medium mb-6 fade-up-delay">
+        <div className={`mt-16 text-center ${isInView ? "fade-up" : "fade-init"}`}>
+          <h3
+            className={`text-xl font-medium mb-6 ${
+              isInView ? "fade-up-delay" : "fade-init"
+            }`}
+          >
             {t("skills.alsoWorkingWith")}
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-3 fade-up-delay">
+          <div
+            className={`flex flex-wrap justify-center gap-3 ${
+              isInView ? "fade-up-delay" : "fade-init"
+            }`}
+          >
             {TECH_STACK.map((tech) => (
               <span
                 key={tech}
@@ -149,9 +168,18 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 fade-up">
+        <div
+          className={`mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 ${
+            isInView ? "fade-up" : "fade-init"
+          }`}
+        >
           {STATS.map((stat) => (
-            <div key={stat.label} className="text-center fade-up-delay">
+            <div
+              key={stat.label}
+              className={`text-center ${
+                isInView ? "fade-up-delay" : "fade-init"
+              }`}
+            >
               <div className="text-2xl md:text-3xl font-light mb-2 text-pri">
                 {stat.number}
               </div>
