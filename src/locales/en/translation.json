@@ -67,7 +67,8 @@
   "projectCard": {
     "liveDemo": "Live Demo",
     "github": "Github",
-    "fermer": "Close"
+    "hide": "Close",
+    "open": "Learn more..."
   },
 
   "about": {
