@@ -97,6 +97,50 @@ html, body {
   }
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.fade-up-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: .2s;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeLeft 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bar-animate {
+  width: 0;
+  animation: barAnim 1.3s forwards ease;
+}
+
+@keyframes barAnim {
+  from {
+    width: 0;
+  }
+}
+
 
 @custom-variant dark (&:where(.dark, .dark *));
 
